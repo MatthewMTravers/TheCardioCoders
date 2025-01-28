@@ -20,7 +20,7 @@ split_docs = []
 #split all the files
 for file in raw_json_docs:
     #loading the document
-    json_loader = JSONLoader(file, jq_schema=".")
+    json_loader = JSONLoader(file, jq_schema=".", text_content=False)
     doc = json_loader.load()
 
     #splitting the document
