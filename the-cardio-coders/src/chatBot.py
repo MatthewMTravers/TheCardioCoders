@@ -4,6 +4,7 @@ from langchain_milvus import Milvus
 from langchain_community.document_loaders import JSONLoader
 from langchain_text_splitters import CharacterTextSplitter
 from pymilvus import Collection, connections
+from uuid import uuid4
 
 
 ollama = OllamaLLM(model = 'llama3.2')
@@ -15,7 +16,7 @@ vector_store = Milvus(embedding_function=embeddings)
 #json files containing data
 raw_json_docs = ["exercises1.json", "exercises2.json", "stretches.json"]
 
-split_docs = []
+documents = []
 
 #split all the files
 for file in raw_json_docs:
@@ -28,6 +29,11 @@ for file in raw_json_docs:
     split_doc = text_splitter.split_documents(doc)
 
     #add split document to current list
-    split_docs.extend(split_doc)
+    documents.extend(split_doc)
 
-print(split_docs)
+
+#put the documents in the vector store, which acts as the database
+uuids = [str(uuid4()) for _ in range(len(documents))]
+vector_store.add_documents(documents=documents, ids=uuids)
+
+print("added docs to db")
