@@ -8,6 +8,6 @@
 1. Install Docker Desktop
 2. run the cmd 
 curl -sfL https://raw.githubusercontent.com/milvus-io/milvus/master/scripts/standalone_embed.sh -o standalone_embed.sh
-3. start Milvus with cmd (only need to do this once. then you can start milvus in docker desktop)
+3. start Milvus with cmd (only need to do this once. then you can start milvus in docker desktop. everytime you start it, youll get a bunch of new log files)
 bash standalone_embed.sh start
 
