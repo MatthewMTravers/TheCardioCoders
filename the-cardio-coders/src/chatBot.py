@@ -8,49 +8,45 @@ from uuid import uuid4
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
+from langchain import hub
+from typing_extensions import List, TypedDict
+from langchain_core.documents import Document
+from langgraph.graph import START, StateGraph
 
-
-# Initialize the LLM and Embeddings
+# Initialize the LLM and Embedding Model (same as used in jupyter notebook)
 ollama = OllamaLLM(model='llama3.2')
-#initializing the embedding model which is the same as used in jupyter notebook
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
-
-#loading the FAISS index and document embeddings
+# Load the FAISS index and document embeddings
 index = faiss.read_index('faiss_index1.index')
 embeddings_matrix = np.load('embeddings1.npy')
 
-
-#json data
+# Current hardcoded JSON response
+    # TODO: update to call API and use respective response
 raw_json_docs = ["exercises.json"]
-
 
 documents = []
 num = 0
 
 # Process JSON files
 for file in raw_json_docs:
-    #loading the document
+    # Loading the document
     json_loader = JSONLoader(file, jq_schema=".", text_content=False)
     doc = json_loader.load()    
 
-    #splitting the document
+    # Splitting the document
     for exercise in doc:
 
-        #getting the page content from json, ignoring metadata
+        # Gets page content and loads into a dictionary to query
         exercise_content = exercise.page_content
-
-        #convert json string to dictionary
         exercise_dict = json.loads(exercise_content)
-
         exercise_list = exercise_dict.get("exercises", [])
 
-        #add each exercise as an individual document
+        # Adds each exercise as an individual document
         for exercise_item in exercise_list:
             document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num+1})
             num += 1
             documents.append(document)
-
 
 # Function to query the FAISS vector store and get relevant documents
 def query_vector_store(query, k=5):
@@ -66,40 +62,45 @@ def query_vector_store(query, k=5):
     
     return relevant_docs
 
+################################################################################
 
-from langchain import hub
-from typing_extensions import List, TypedDict
-from langchain_core.documents import Document
-from langgraph.graph import START, StateGraph
-
-#look into using different prompt, as mentioned in the lecture recording
+# TODO: look into using different prompt, as mentioned in the lecture recording
 prompt = hub.pull("rlm/rag-prompt")
 
+# Defines the object with properties required for queries 
 class State(TypedDict):
     question: str
     context: List[Document]
     answer: str
 
-#define application steps
+# Retrieves relevant documents based on the user's question  
 def retrieve(state:State):
     retrieved_docs = query_vector_store(state["question"])
-    print("Retrieved Docs:", [doc.page_content for doc in retrieved_docs])  # Debugging
+    # print("Retrieved Docs:", [doc.page_content for doc in retrieved_docs])  # Debugging
     return {"context": retrieved_docs}
 
-
+# Generates an answer using the retrieved documents and the LLM
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
     messages = prompt.invoke({"question": state["question"], "context":docs_content})
     response = ollama.invoke(messages)
     return {"answer": response}
 
-
-#compile application and test. uses langgraph to make a state graph
+# Compile application and make state graph
 graph_builder = StateGraph(State).add_sequence([retrieve, generate])
 graph_builder.add_edge(START, "retrieve")
 graph = graph_builder.compile()
 
-
-response = graph.invoke({"question": "what are some exercises that target my back"})
+# Get response from state graph and display the response to user
+response = graph.invoke({"question": "what are some exercises that target my shoulders"})
 print(response["answer"])
 
+
+## Current Response Displayed:
+
+# Here are some exercises that target your shoulders:
+# * Shoulder Circles
+# * Leverage Shoulder Press
+# * Dumbbell Scaption
+# * Push Press - Behind the Neck 
+# These exercises can help strengthen and tone your shoulder muscles, depending on your level of experience.
