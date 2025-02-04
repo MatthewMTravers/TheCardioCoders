@@ -16,6 +16,18 @@ venv/
 # production
 /build
 
+# Milvus database files
+volumes/milvus/etcd/member/snap/*
+volumes/milvus/etcd/member/wal/*
+volumes/milvus/rdb_data/*
+volumes/milvus/rdb_data_meta_kv/*
+
+# Temporary files (if any)
+*.tmp
+
+# Log files (if you don't want to track them)
+*.log
+
 # misc
 .DS_Store
 .env.local
