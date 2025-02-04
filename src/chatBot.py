@@ -18,12 +18,12 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('faiss_index1.index')
-embeddings_matrix = np.load('embeddings1.npy')
+index = faiss.read_index('Data/faiss_index1.index')
+embeddings_matrix = np.load('Data/embeddings1.npy')
 
 # Current hardcoded JSON response
     # TODO: update to call API and use respective response
-raw_json_docs = ["exercises.json"]
+raw_json_docs = ["Data/exercises.json"]
 
 documents = []
 num = 0
