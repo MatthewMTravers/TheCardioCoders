@@ -12,6 +12,8 @@ from langchain import hub
 from typing_extensions import List, TypedDict
 from langchain_core.documents import Document
 from langgraph.graph import START, StateGraph
+import logging
+
 
 # Initialize the LLM and Embedding Model (same as used in jupyter notebook)
 ollama = OllamaLLM(model='llama3.2')
@@ -23,7 +25,7 @@ embeddings_matrix = np.load('data/embeddings1.npy')
 
 # Current hardcoded JSON response
     # TODO: update to call API and use respective response
-raw_json_docs = ['Data/exercises.json']
+raw_json_docs = ['data/exercises.json']
 
 documents = []
 num = 0
@@ -91,16 +93,4 @@ graph_builder = StateGraph(State).add_sequence([retrieve, generate])
 graph_builder.add_edge(START, "retrieve")
 graph = graph_builder.compile()
 
-# Get response from state graph and display the response to user
-response = graph.invoke({"question": "what are some exercises that target my shoulders"})
-print(response["answer"])
-
-
-## Current Response Displayed:
-
-# Here are some exercises that target your shoulders:
-# * Shoulder Circles
-# * Leverage Shoulder Press
-# * Dumbbell Scaption
-# * Push Press - Behind the Neck 
-# These exercises can help strengthen and tone your shoulder muscles, depending on your level of experience.
+# server.py will invoke the StateGraph with the question obtained from the UI
