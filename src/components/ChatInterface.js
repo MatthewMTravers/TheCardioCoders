@@ -113,7 +113,7 @@ const ChatInterface = () => {
           {loading && (
             <div className="flex justify-start">
               <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
-                Typing...
+                Thinking...
               </div>
             </div>
           )}
