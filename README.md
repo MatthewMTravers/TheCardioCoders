@@ -18,6 +18,17 @@ This application is a **Retrieval-Augmented Generation (RAG) system** that helps
 3. Based on the "K" best documents selected (smaller values are better for more precise results and faster query times but larger values give more context), the LLM generates a detailed answer and adds it to the  `StateGraph` which manages the flow between steps (retrieving documents → generating an answer), providing a structured and modular way to handle the process.
 4. Finally, the response is printed to the user with a relevant answer relating to their initial question.
 
+# Running the Project:
+
+##### Flask Backend Server:
+
+Run `python3 server.py` to start the Flask python backend server which imports the chatBot.py program and subsequently creates the StateGraph
+
+##### React Frontend UI:
+
+Run `npm start` after starting the backend server, then interact with the UI to receive responses from the RAG bot
+
+
 
 # Getting Started with Create React App
 
@@ -29,23 +40,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
