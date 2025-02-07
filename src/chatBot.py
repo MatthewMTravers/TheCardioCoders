@@ -20,33 +20,38 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('data/faiss_index1.index')
-embeddings_matrix = np.load('data/embeddings1.npy')
+index = faiss.read_index('data/faiss_index.index')
+embeddings_matrix = np.load('data/embeddings.npy')
 
 # Current hardcoded JSON response
     # TODO: update to call API and use respective response
-raw_json_docs = ['data/exercises.json']
+raw_json_docs = ["data/exercises.json", "data/exercises1.json", "data/exercises2.json"]
 
 documents = []
 num = 0
 
 # Process JSON files
 for file in raw_json_docs:
-    # Loading the document
     json_loader = JSONLoader(file, jq_schema=".", text_content=False)
-    doc = json_loader.load()    
+    doc = json_loader.load()
 
     # Splitting the document
     for exercise in doc:
-
-        # Gets page content and loads into a dictionary to query
         exercise_content = exercise.page_content
         exercise_dict = json.loads(exercise_content)
-        exercise_list = exercise_dict.get("exercises", [])
 
-        # Adds each exercise as an individual document
+        # Check if the exercise_dict is a dictionary and contains 'exercises' key
+        if isinstance(exercise_dict, dict):
+            exercise_list = exercise_dict.get("exercises", [])
+        elif isinstance(exercise_dict, list):
+            # If exercise_dict is a list, you can directly assign it
+            exercise_list = exercise_dict
+        else:
+            continue
+
+        # Add each exercise as an individual document
         for exercise_item in exercise_list:
-            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num+1})
+            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num + 1})
             num += 1
             documents.append(document)
 
