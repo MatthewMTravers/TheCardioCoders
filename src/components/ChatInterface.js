@@ -52,7 +52,7 @@ const ChatInterface = () => {
       equipment: "Guide me through gym equipment",
     };
     const selectedMessage = quickActions[action];
-    setInput(selectedMessage);
+    setInput('');
     sendMessage(selectedMessage);
   };
 
