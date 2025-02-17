@@ -1,21 +1,42 @@
 import React, { useState } from 'react';
-import { MessageCircle, Send, Dumbbell, Apple, Calendar } from 'lucide-react';
+import { 
+  MessageCircle, 
+  Send, 
+  Dumbbell, 
+  Apple, 
+  Calendar, 
+  ThumbsUp, 
+  ThumbsDown, 
+  RefreshCw, 
+  Bookmark 
+} from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ChatInterface = () => {
+  const navigate = useNavigate();
   const [messages, setMessages] = useState([
     {
+      id: '1',
       type: 'bot',
-      content: "Hello! I'm your fitness assistant. I can help you with workout plans, meal planning, and gym equipment guidance. What would you like to know?"
+      content: "Hello! I'm your fitness assistant. I can help you with workout plans, meal planning, and gym equipment guidance. What would you like to know?",
+      rating: null
     }
   ]);
   const [input, setInput] = useState('');
 
   const handleSend = () => {
     if (input.trim()) {
-      setMessages([...messages, 
-        { type: 'user', content: input },
-        { type: 'bot', content: 'Let me help you with that...' } // Placeholder for actual bot response
-      ]);
+      const newMessages = [
+        ...messages,
+        { id: Date.now().toString(), type: 'user', content: input },
+        { 
+          id: (Date.now() + 1).toString(), 
+          type: 'bot', 
+          content: 'Let me help you with that...', 
+          rating: null 
+        }
+      ];
+      setMessages(newMessages);
       setInput('');
     }
   };
@@ -29,17 +50,52 @@ const ChatInterface = () => {
     setInput(quickActions[action]);
   };
 
+  const handleRating = (messageId, newRating) => {
+    setMessages(messages.map(message => {
+      if (message.id === messageId) {
+        const updatedRating = message.rating === newRating ? null : newRating;
+        return { ...message, rating: updatedRating };
+      }
+      return message;
+    }));
+  };
+
+  const handleRegenerate = (messageId) => {
+    const messageIndex = messages.findIndex(m => m.id === messageId);
+    if (messageIndex === -1) return;
+
+    const userMessage = messageIndex > 0 ? messages[messageIndex - 1] : null;
+    if (!userMessage || userMessage.type !== 'user') return;
+
+    const newBotMessage = {
+      id: Date.now().toString(),
+      type: 'bot',
+      content: `Regenerated response for: ${userMessage.content}`,
+      rating: null
+    };
+
+    const newMessages = [...messages];
+    newMessages[messageIndex] = newBotMessage;
+    setMessages(newMessages);
+  };
+
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Main Chat Interface */}
       <div className="flex flex-col w-full max-w-4xl mx-auto p-4 bg-white shadow-lg my-4 rounded-lg">
-        {/* Header */}
-        <div className="flex items-center p-4 border-b">
-          <MessageCircle className="w-6 h-6 text-blue-500" />
-          <h1 className="text-xl font-bold ml-2">Fitness Assistant</h1>
+        <div className="flex items-center justify-between p-4 border-b">
+          <div className="flex items-center">
+            <MessageCircle className="w-6 h-6 text-blue-500" />
+            <h1 className="text-xl font-bold ml-2">Fitness Assistant</h1>
+          </div>
+          <button
+            onClick={() => navigate('/bookmarks')}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors"
+          >
+            <Bookmark className="w-5 h-5" />
+            My Bookmarks
+          </button>
         </div>
 
-        {/* Quick Action Buttons */}
         <div className="flex gap-2 p-4">
           <button
             onClick={() => handleQuickAction('workout')}
@@ -64,27 +120,56 @@ const ChatInterface = () => {
           </button>
         </div>
 
-        {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {messages.map((message, index) => (
+          {messages.map((message) => (
             <div
-              key={index}
+              key={message.id}
               className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
             >
-              <div
-                className={`max-w-[70%] p-3 rounded-lg ${
-                  message.type === 'user'
-                    ? 'bg-blue-500 text-white rounded-br-none'
-                    : 'bg-gray-100 text-gray-800 rounded-bl-none'
-                }`}
-              >
-                {message.content}
+              <div className="max-w-[70%]">
+                <div
+                  className={`p-3 rounded-lg ${
+                    message.type === 'user'
+                      ? 'bg-blue-500 text-white rounded-br-none'
+                      : 'bg-gray-100 text-gray-800 rounded-bl-none'
+                  }`}
+                >
+                  {message.content}
+                </div>
+                
+                {message.type === 'bot' && (
+                  <div className="flex items-center gap-2 mt-2">
+                    <button
+                      onClick={() => handleRating(message.id, 'up')}
+                      className={`p-1 rounded hover:bg-gray-100 ${
+                        message.rating === 'up' ? 'text-green-500' : 'text-gray-500'
+                      }`}
+                      title={message.rating === 'up' ? 'Remove rating' : 'Rate up'}
+                    >
+                      <ThumbsUp className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => handleRating(message.id, 'down')}
+                      className={`p-1 rounded hover:bg-gray-100 ${
+                        message.rating === 'down' ? 'text-red-500' : 'text-gray-500'
+                      }`}
+                      title={message.rating === 'down' ? 'Remove rating' : 'Rate down'}
+                    >
+                      <ThumbsDown className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => handleRegenerate(message.id)}
+                      className="p-1 rounded hover:bg-gray-100 text-gray-500"
+                    >
+                      <RefreshCw className="w-4 h-4" />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Input Area */}
         <div className="border-t p-4">
           <div className="flex gap-2">
             <input
