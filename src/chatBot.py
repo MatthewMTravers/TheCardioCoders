@@ -71,7 +71,7 @@ def query_vector_store(query, k=5):
 
 ################################################################################
 
-# TODO: look into using different prompt, as mentioned in the lecture recording
+# TODO: look into using different prompt - Mistral?
 prompt = hub.pull("rlm/rag-prompt")
 
 # Defines the object with properties required for queries 
@@ -86,12 +86,22 @@ def retrieve(state:State):
     # print("Retrieved Docs:", [doc.page_content for doc in retrieved_docs])  # Debugging
     return {"context": retrieved_docs}
 
-# Generates an answer using the retrieved documents and the LLM
+# Generates an answer using the retrieved documents and streams output
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
     messages = prompt.invoke({"question": state["question"], "context":docs_content})
-    response = ollama.invoke(messages)
-    return {"answer": response}
+    
+    # Stream response from Ollama instead of returning all at once
+    response_stream = ollama.stream(messages)
+
+    # Testing code for confirming streaming is active
+    print("Streaming response:")
+    for chunk in response_stream:
+        print(chunk, end="", flush=True)
+    
+    # Return the generator for SSE support
+    return {"answer": response_stream}  
+
 
 # Compile application and make state graph
 graph_builder = StateGraph(State).add_sequence([retrieve, generate])

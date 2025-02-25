@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MessageCircle, Send, Dumbbell, Apple, Calendar } from "lucide-react";
 
 const ChatInterface = () => {
@@ -14,28 +14,68 @@ const ChatInterface = () => {
 
   const sendMessage = async (userMessage) => {
     setLoading(true);
-
-    // Update UI immediately with user message
     setMessages((prev) => [...prev, { type: "user", content: userMessage }]);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
+      const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${userMessage}`);
 
-      const data = await response.json();
-      setMessages((prev) => [...prev, { type: "bot", content: data.answer }]);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let partialMessage = "";
+
+      // Function to process each chunk of the stream
+      const readChunk = async () => {
+        const { done, value } = await reader.read();
+
+        if (done) {
+          // Stream finished, add any remaining partial message
+          if (partialMessage) {
+            setMessages((prev) => [...prev, { type: "bot", content: partialMessage }]);
+          }
+          setLoading(false);
+          return;
+        }
+
+        const chunk = decoder.decode(value);
+        const lines = chunk.split('\n\n');
+
+        for (const line of lines) {
+            if (line.startsWith('data: ')) {
+                const data = line.substring('data: ');
+                try {
+                    const parsedData = JSON.parse(data);
+                    if (typeof parsedData === 'object' && parsedData.answer) {
+                        const botMessage = parsedData.answer;
+                        setMessages((prev) => [...prev, { type: "bot", content: botMessage }]);
+                    } else if (typeof parsedData === 'string') {
+                        partialMessage += parsedData;
+                    }
+                } catch (jsonError) {
+                    // If not valid JSON, treat as a string
+                    partialMessage += data;
+                }
+            }
+        }
+        
+        readChunk(); // Read the next chunk
+      };
+
+      readChunk(); // Start reading the stream
+
     } catch (error) {
       console.error("Error sending message:", error);
       setMessages((prev) => [
         ...prev,
         { type: "bot", content: "Sorry, I couldn't process that request." },
       ]);
+      setLoading(false);
     }
 
-    setLoading(false);
+    setInput("");
   };
 
   const handleSend = () => {
