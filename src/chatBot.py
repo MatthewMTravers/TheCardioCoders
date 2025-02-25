@@ -83,7 +83,6 @@ class State(TypedDict):
 # Retrieves relevant documents based on the user's question  
 def retrieve(state:State):
     retrieved_docs = query_vector_store(state["question"])
-    # print("Retrieved Docs:", [doc.page_content for doc in retrieved_docs])  # Debugging
     return {"context": retrieved_docs}
 
 # Generates an answer using the retrieved documents and streams output
@@ -93,11 +92,6 @@ def generate(state: State):
     
     # Stream response from Ollama instead of returning all at once
     response_stream = ollama.stream(messages)
-
-    # Testing code for confirming streaming is active
-    print("Streaming response:")
-    for chunk in response_stream:
-        print(chunk, end="", flush=True)
     
     # Return the generator for SSE support
     return {"answer": response_stream}  

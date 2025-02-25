@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { MessageCircle, Send, Dumbbell, Apple, Calendar } from "lucide-react";
 
 const ChatInterface = () => {
@@ -28,6 +28,25 @@ const ChatInterface = () => {
       let partialMessage = "";
 
       // Function to process each chunk of the stream
+      const processChunk = (chunk) => {
+        const lines = chunk.split('\n\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.substring(6); // Remove 'data: ' prefix
+            partialMessage += data + " ";
+            setMessages((prev) => {
+              const lastMessage = prev[prev.length - 1];
+              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith("...")) {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() + "..." }];
+              } else {
+                return [...prev, { type: "bot", content: partialMessage.trim() + "..." }];
+              }
+            });
+          }
+        }
+      };
+
       const readChunk = async () => {
         const { done, value } = await reader.read();
 
@@ -41,26 +60,8 @@ const ChatInterface = () => {
         }
 
         const chunk = decoder.decode(value);
-        const lines = chunk.split('\n\n');
+        processChunk(chunk);
 
-        for (const line of lines) {
-            if (line.startsWith('data: ')) {
-                const data = line.substring('data: ');
-                try {
-                    const parsedData = JSON.parse(data);
-                    if (typeof parsedData === 'object' && parsedData.answer) {
-                        const botMessage = parsedData.answer;
-                        setMessages((prev) => [...prev, { type: "bot", content: botMessage }]);
-                    } else if (typeof parsedData === 'string') {
-                        partialMessage += parsedData;
-                    }
-                } catch (jsonError) {
-                    // If not valid JSON, treat as a string
-                    partialMessage += data;
-                }
-            }
-        }
-        
         readChunk(); // Read the next chunk
       };
 
