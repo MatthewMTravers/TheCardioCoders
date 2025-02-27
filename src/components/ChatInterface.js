@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MessageCircle, Send, Dumbbell, Apple, Calendar } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 const ChatInterface = () => {
   const [messages, setMessages] = useState([
@@ -106,7 +107,11 @@ const ChatInterface = () => {
                     : "bg-gray-100 text-gray-800 rounded-bl-none"
                 }`}
               >
-                {message.content}
+                {message.type === "bot" ? (
+                  <ReactMarkdown>{message.content}</ReactMarkdown> // converts markdown to easily readable interface
+                ) : (
+                  message.content
+                )}
               </div>
             </div>
           ))}

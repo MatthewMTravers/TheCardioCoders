@@ -20,12 +20,12 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('data/faiss_index1.index')
-embeddings_matrix = np.load('data/embeddings1.npy')
+index = faiss.read_index('/Users/yusuf/Desktop/TheCardioCoders/src/Data/faiss_index1.index')
+embeddings_matrix = np.load('/Users/yusuf/Desktop/TheCardioCoders/src/Data/embeddings1.npy')
 
 # Current hardcoded JSON response
     # TODO: update to call API and use respective response
-raw_json_docs = ['data/exercises.json']
+raw_json_docs = ['/Users/yusuf/Desktop/TheCardioCoders/src/Data/exercises.json']
 
 documents = []
 num = 0
@@ -67,7 +67,12 @@ def query_vector_store(query, k=5):
 ################################################################################
 
 # TODO: look into using different prompt, as mentioned in the lecture recording
-prompt = hub.pull("rlm/rag-prompt")
+with open("/Users/yusuf/Desktop/TheCardioCoders/src/workoutPlanPrompt", "r") as file:
+    workoutPlanPrompt = file.read()
+
+with open("/Users/yusuf/Desktop/TheCardioCoders/src/conciseAnswerPrompt", "r") as file:
+    conciseAnswerPrompt = file.read()
+
 
 # Defines the object with properties required for queries 
 class State(TypedDict):
@@ -84,8 +89,16 @@ def retrieve(state:State):
 # Generates an answer using the retrieved documents and the LLM
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
-    messages = prompt.invoke({"question": state["question"], "context":docs_content})
-    response = ollama.invoke(messages)
+
+    if "workout plan" in state["question"].lower() or "exercise routine" in state["question"].lower():
+
+        prompt = workoutPlanPrompt.format(context=docs_content, question=state["question"])
+        response = ollama.invoke(prompt)
+
+    else:
+        prompt = conciseAnswerPrompt.format(context=docs_content, question=state["question"])
+        response = ollama.invoke(prompt)
+
     return {"answer": response}
 
 # Compile application and make state graph
