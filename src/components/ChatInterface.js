@@ -26,6 +26,7 @@ const ChatInterface = () => {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let partialMessage = "";
+      let firstChunkReceived = false;
 
       // Function to process each chunk of the stream
       const processChunk = (chunk) => {
@@ -37,12 +38,18 @@ const ChatInterface = () => {
             partialMessage += data + " ";
             setMessages((prev) => {
               const lastMessage = prev[prev.length - 1];
-              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith("...")) {
-                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() + "..." }];
+              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() + "." }];
               } else {
-                return [...prev, { type: "bot", content: partialMessage.trim() + "..." }];
+                return [...prev, { type: "bot", content: partialMessage.trim() + "." }];
               }
             });
+
+            // Set loading to false as soon as the first chunk is received
+            if (!firstChunkReceived) {
+              setLoading(false);
+              firstChunkReceived = true;
+            }
           }
         }
       };
@@ -53,9 +60,15 @@ const ChatInterface = () => {
         if (done) {
           // Stream finished, add any remaining partial message
           if (partialMessage) {
-            setMessages((prev) => [...prev, { type: "bot", content: partialMessage }]);
+            setMessages((prev) => {
+              const lastMessage = prev[prev.length - 1];
+              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() }];
+              } else {
+                return [...prev, { type: "bot", content: partialMessage.trim() }];
+              }
+            });
           }
-          setLoading(false);
           return;
         }
 
@@ -154,7 +167,7 @@ const ChatInterface = () => {
           {loading && (
             <div className="flex justify-start">
               <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
-                Thinking...
+                . . .
               </div>
             </div>
           )}
@@ -167,7 +180,7 @@ const ChatInterface = () => {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSend()}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
               placeholder="Ask about workouts, meal plans, or equipment..."
               className="flex-1 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
             />

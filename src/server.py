@@ -13,18 +13,15 @@ def stream():
 
     def generate_response():
         try:
-            # Invoke stategraph (assuming it returns an iterable response)
             response_stream = graph.invoke({"question": user_question})
+            generated_response = response_stream["answer"]
 
-            # Check if response_stream['answer'] is an iterable or streamable object
-            if hasattr(response_stream["answer"], '__iter__'):
-                for chunk in response_stream["answer"]:
+            # Ensure the response is iterable
+            if hasattr(generated_response, '__iter__'):
+                for chunk in generated_response:
                     words = chunk.split()  # Split the chunk into words
                     for word in words:
-                        print(f"{word}", end=" ")  # Print each word followed by a space
                         yield f"data: {word}\n\n"
-            else:
-                print(f"Streaming final answer: {response_stream['answer']}")  # Print the final answer if not chunked
         except Exception as e:
             print(f"Error in stream: {e}")
 

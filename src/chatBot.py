@@ -88,18 +88,40 @@ def retrieve(state:State):
 # Generates an answer using the retrieved documents and streams output
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
-    messages = prompt.invoke({"question": state["question"], "context":docs_content})
+    messages = prompt.invoke({"question": state["question"], "context": docs_content})
     
     # Stream response from Ollama instead of returning all at once
     response_stream = ollama.stream(messages)
     
-    # Return the generator for SSE support
-    return {"answer": response_stream}  
+    def stream_generator():
+        print("Streaming response:")
+        buffer = ""
 
+        # Iterate over chunks of the response stream
+        for chunk in response_stream:
+            buffer += chunk
+            words = buffer.split()
+            
+            # Check if the last word is complete
+            if not buffer.endswith(" "):
+                buffer = words.pop()  # Keep the last word in the buffer if it's incomplete
+            else:
+                buffer = ""
+
+            # Return each word with a space
+            for word in words:
+                print(word, end=" ", flush=True)
+                yield word + " "
+
+        # Yield any remaining buffered word
+        if buffer:
+            # print(buffer, end=" ", flush=True)
+            yield buffer + " "
+
+    # Return the generator for SSE support
+    return {"answer": stream_generator()}
 
 # Compile application and make state graph
 graph_builder = StateGraph(State).add_sequence([retrieve, generate])
 graph_builder.add_edge(START, "retrieve")
 graph = graph_builder.compile()
-
-# server.py will invoke the StateGraph with the question obtained from the UI
