@@ -20,33 +20,41 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('data/faiss_index1.index')
-embeddings_matrix = np.load('data/embeddings1.npy')
+index = faiss.read_index('data/faiss_index.index')
+embeddings_matrix = np.load('data/embeddings.npy')
 
 # Current hardcoded JSON response
-    # TODO: update to call API and use respective response
-raw_json_docs = ['data/exercises.json']
+raw_json_docs = [
+    "data/exercises/exercises1.json", 
+    "data/exercises/exercises2.json", 
+    "data/exercises/exercises3.json"
+    ]
 
 documents = []
 num = 0
 
 # Process JSON files
 for file in raw_json_docs:
-    # Loading the document
     json_loader = JSONLoader(file, jq_schema=".", text_content=False)
-    doc = json_loader.load()    
+    doc = json_loader.load()
 
     # Splitting the document
     for exercise in doc:
-
-        # Gets page content and loads into a dictionary to query
         exercise_content = exercise.page_content
         exercise_dict = json.loads(exercise_content)
-        exercise_list = exercise_dict.get("exercises", [])
 
-        # Adds each exercise as an individual document
+        # Check if the exercise_dict is a dictionary and contains 'exercises' key
+        if isinstance(exercise_dict, dict):
+            exercise_list = exercise_dict.get("exercises", [])
+        elif isinstance(exercise_dict, list):
+            # If exercise_dict is a list, you can directly assign it
+            exercise_list = exercise_dict
+        else:
+            continue
+
+        # Add each exercise as an individual document
         for exercise_item in exercise_list:
-            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num+1})
+            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num + 1})
             num += 1
             documents.append(document)
 
@@ -66,7 +74,7 @@ def query_vector_store(query, k=5):
 
 ################################################################################
 
-# TODO: look into using different prompt, as mentioned in the lecture recording
+# TODO: look into using different prompt - Mistral?
 prompt = hub.pull("rlm/rag-prompt")
 
 # Defines the object with properties required for queries 
@@ -78,19 +86,45 @@ class State(TypedDict):
 # Retrieves relevant documents based on the user's question  
 def retrieve(state:State):
     retrieved_docs = query_vector_store(state["question"])
-    # print("Retrieved Docs:", [doc.page_content for doc in retrieved_docs])  # Debugging
     return {"context": retrieved_docs}
 
-# Generates an answer using the retrieved documents and the LLM
+# Generates an answer using the retrieved documents and streams output
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
-    messages = prompt.invoke({"question": state["question"], "context":docs_content})
-    response = ollama.invoke(messages)
-    return {"answer": response}
+    messages = prompt.invoke({"question": state["question"], "context": docs_content})
+    
+    # Stream response from Ollama instead of returning all at once
+    response_stream = ollama.stream(messages)
+    
+    def stream_generator():
+        print("Streaming response:")
+        buffer = ""
+
+        # Iterate over chunks of the response stream
+        for chunk in response_stream:
+            buffer += chunk
+            words = buffer.split()
+            
+            # Check if the last word is complete
+            if not buffer.endswith(" "):
+                buffer = words.pop()  # Keep the last word in the buffer if it's incomplete
+            else:
+                buffer = ""
+
+            # Return each word with a space
+            for word in words:
+                print(word, end=" ", flush=True)
+                yield word + " "
+
+        # Yield any remaining buffered word
+        if buffer:
+            # print(buffer, end=" ", flush=True)
+            yield buffer + " "
+
+    # Return the generator for SSE support
+    return {"answer": stream_generator()}
 
 # Compile application and make state graph
 graph_builder = StateGraph(State).add_sequence([retrieve, generate])
 graph_builder.add_edge(START, "retrieve")
 graph = graph_builder.compile()
-
-# server.py will invoke the StateGraph with the question obtained from the UI

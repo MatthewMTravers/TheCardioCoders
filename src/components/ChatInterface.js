@@ -14,28 +14,82 @@ const ChatInterface = () => {
 
   const sendMessage = async (userMessage) => {
     setLoading(true);
-
-    // Update UI immediately with user message
     setMessages((prev) => [...prev, { type: "user", content: userMessage }]);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage }),
-      });
+      const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${userMessage}`);
 
-      const data = await response.json();
-      setMessages((prev) => [...prev, { type: "bot", content: data.answer }]);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let partialMessage = "";
+      let firstChunkReceived = false;
+
+      // Function to process each chunk of the stream
+      const processChunk = (chunk) => {
+        const lines = chunk.split('\n\n');
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.substring(6); // Remove 'data: ' prefix
+            partialMessage += data + " ";
+            setMessages((prev) => {
+              const lastMessage = prev[prev.length - 1];
+              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() + "." }];
+              } else {
+                return [...prev, { type: "bot", content: partialMessage.trim() + "." }];
+              }
+            });
+
+            // Set loading to false as soon as the first chunk is received
+            if (!firstChunkReceived) {
+              setLoading(false);
+              firstChunkReceived = true;
+            }
+          }
+        }
+      };
+
+      const readChunk = async () => {
+        const { done, value } = await reader.read();
+
+        if (done) {
+          // Stream finished, add any remaining partial message
+          if (partialMessage) {
+            setMessages((prev) => {
+              const lastMessage = prev[prev.length - 1];
+              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() }];
+              } else {
+                return [...prev, { type: "bot", content: partialMessage.trim() }];
+              }
+            });
+          }
+          return;
+        }
+
+        const chunk = decoder.decode(value);
+        processChunk(chunk);
+
+        readChunk(); // Read the next chunk
+      };
+
+      readChunk(); // Start reading the stream
+
     } catch (error) {
       console.error("Error sending message:", error);
       setMessages((prev) => [
         ...prev,
         { type: "bot", content: "Sorry, I couldn't process that request." },
       ]);
+      setLoading(false);
     }
 
-    setLoading(false);
+    setInput("");
   };
 
   const handleSend = () => {
@@ -113,7 +167,7 @@ const ChatInterface = () => {
           {loading && (
             <div className="flex justify-start">
               <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
-                Thinking...
+                . . .
               </div>
             </div>
           )}
@@ -126,7 +180,7 @@ const ChatInterface = () => {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSend()}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
               placeholder="Ask about workouts, meal plans, or equipment..."
               className="flex-1 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
             />
