@@ -6,7 +6,7 @@ from langchain.schema import Document
 from langchain_community.document_loaders import JSONLoader
 
 # Load JSON data - can be changed as needed
-raw_json_docs = ["exercises.json", "exercises1.json", "exercises2.json"]
+raw_json_docs = ["exercises.json", "exercises1.json", "exercises2.json", "data/Foodfacts1.json"]
 
 documents = []
 num = 0
@@ -18,22 +18,22 @@ for file in raw_json_docs:
     doc = json_loader.load()
 
     # Splitting the document
-    for exercise in doc:
-        exercise_content = exercise.page_content
-        exercise_dict = json.loads(exercise_content)
+    for entry in doc:
+        entry_content = entry.page_content
+        entry_dict = json.loads(entry_content)
 
         # Check if the exercise_dict is a dictionary and contains 'exercises' key
-        if isinstance(exercise_dict, dict):
-            exercise_list = exercise_dict.get("exercises", [])
-        elif isinstance(exercise_dict, list):
+        if isinstance(entry_dict, dict):
+            entry_list = entry_dict.get("exercises", []) or entry_dict.get("foodfacts", [])
+        elif isinstance(entry_dict, list):
             # If exercise_dict is a list, you can directly assign it
-            exercise_list = exercise_dict
+            entry_list = entry_dict
         else:
             continue
 
         # Add each exercise as an individual document
-        for exercise_item in exercise_list:
-            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num + 1})
+        for entry_item in entry_list:
+            document = Document(page_content=str(entry_item), metadata={"source": file, "seq_num": num + 1})
             num += 1
             documents.append(document)
 
