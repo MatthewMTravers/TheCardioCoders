@@ -5,9 +5,9 @@ from langchain_community.document_loaders import JSONLoader
 import json
 from langchain.schema import Document
 from uuid import uuid4
+from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 from langchain import hub
 from typing_extensions import List, TypedDict
 from langchain_core.documents import Document
@@ -20,12 +20,12 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('/Users/yusuf/Desktop/TheCardioCoders/src/Data/faiss_index1.index')
-embeddings_matrix = np.load('/Users/yusuf/Desktop/TheCardioCoders/src/Data/embeddings1.npy')
+index = faiss.read_index('Data/faiss_index1.index')
+embeddings_matrix = np.load('Data/embeddings1.npy')
 
 # Current hardcoded JSON response
     # TODO: update to call API and use respective response
-raw_json_docs = ['/Users/yusuf/Desktop/TheCardioCoders/src/Data/exercises.json']
+raw_json_docs = ['Data/exercises.json']
 
 documents = []
 num = 0
@@ -67,10 +67,10 @@ def query_vector_store(query, k=5):
 ################################################################################
 
 # TODO: look into using different prompt, as mentioned in the lecture recording
-with open("/Users/yusuf/Desktop/TheCardioCoders/src/workoutPlanPrompt", "r") as file:
+with open("workoutPlanPrompt", "r") as file:
     workoutPlanPrompt = file.read()
 
-with open("/Users/yusuf/Desktop/TheCardioCoders/src/conciseAnswerPrompt", "r") as file:
+with open("conciseAnswerPrompt", "r") as file:
     conciseAnswerPrompt = file.read()
 
 
