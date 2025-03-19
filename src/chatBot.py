@@ -75,10 +75,10 @@ def query_vector_store(query, k=5):
 ################################################################################
 
 # TODO: look into using different prompt, as mentioned in the lecture recording
-with open("/Users/yusuf/Desktop/TheCardioCoders/src/workoutPlanPrompt", "r") as file:
+with open("prompts/workoutPlanPrompt", "r") as file:
     workoutPlanPrompt = file.read()
 
-with open("/Users/yusuf/Desktop/TheCardioCoders/src/conciseAnswerPrompt", "r") as file:
+with open("prompts/conciseAnswerPrompt", "r") as file:
     conciseAnswerPrompt = file.read()
 
 
@@ -107,24 +107,22 @@ def generate(state: State):
     response_stream = ollama.stream(prompt_text)
 
     def stream_generator():
-        print("Streaming response:")
+        # print("Streaming response:")
         buffer = ""
 
         for chunk in response_stream:
             buffer += chunk
-            words = buffer.split()
 
-            if not buffer.endswith(" "):
-                buffer = words.pop() if words else ""
-            else:
-                buffer = ""
+            # Split by newline to preserve structured formatting
+            while '\n' in buffer:
+                line, buffer = buffer.split('\n', 1)
+                # print(line)
+                yield line + '\n'
 
-            for word in words:
-                print(word, end=" ", flush=True)
-                yield word + " "
-
+        # Yield any remaining text
         if buffer:
-            yield buffer + " "
+            # print(buffer)
+            yield buffer
 
     return {"answer": stream_generator()}
 

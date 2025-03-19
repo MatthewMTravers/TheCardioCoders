@@ -16,16 +16,27 @@ def stream():
             response_stream = graph.invoke({"question": user_question})
             generated_response = response_stream["answer"]
 
-            # Ensure the response is iterable
             if hasattr(generated_response, '__iter__'):
+                buffer = ""
+
                 for chunk in generated_response:
-                    words = chunk.split()  # Split the chunk into words
-                    for word in words:
-                        yield f"data: {word}\n\n"
+                    buffer += chunk
+
+                    while '\n' in buffer:
+                        line, buffer = buffer.split('\n', 1)
+                        # print(f"[Server Stream] {line}")
+                        yield f"data: {line}\n\n"
+
+                # Yield any remaining text after stream ends
+                if buffer:
+                    # print(f"[Server Stream] {buffer}")
+                    yield f"data: {buffer}\n\n"
+
         except Exception as e:
-            print(f"Error in stream: {e}")
+            print(f"[Stream Error] {e}")
 
     return Response(generate_response(), content_type="text/event-stream")
+
 
 # Non-streaming response dump
 @app.route('/chat', methods=['POST'])
