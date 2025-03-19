@@ -74,8 +74,13 @@ def query_vector_store(query, k=5):
 
 ################################################################################
 
-# TODO: look into using different prompt - Mistral?
-prompt = hub.pull("rlm/rag-prompt")
+# TODO: look into using different prompt, as mentioned in the lecture recording
+with open("/Users/yusuf/Desktop/TheCardioCoders/src/workoutPlanPrompt", "r") as file:
+    workoutPlanPrompt = file.read()
+
+with open("/Users/yusuf/Desktop/TheCardioCoders/src/conciseAnswerPrompt", "r") as file:
+    conciseAnswerPrompt = file.read()
+
 
 # Defines the object with properties required for queries 
 class State(TypedDict):
@@ -91,38 +96,38 @@ def retrieve(state:State):
 # Generates an answer using the retrieved documents and streams output
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
-    messages = prompt.invoke({"question": state["question"], "context": docs_content})
-    
-    # Stream response from Ollama instead of returning all at once
-    response_stream = ollama.stream(messages)
-    
+
+    # Choose the appropriate prompt template
+    if "workout plan" in state["question"].lower() or "exercise routine" in state["question"].lower():
+        prompt_text = workoutPlanPrompt.format(context=docs_content, question=state["question"])
+    else:
+        prompt_text = conciseAnswerPrompt.format(context=docs_content, question=state["question"])
+
+    # Stream response from Ollama using the chosen prompt
+    response_stream = ollama.stream(prompt_text)
+
     def stream_generator():
         print("Streaming response:")
         buffer = ""
 
-        # Iterate over chunks of the response stream
         for chunk in response_stream:
             buffer += chunk
             words = buffer.split()
-            
-            # Check if the last word is complete
+
             if not buffer.endswith(" "):
-                buffer = words.pop()  # Keep the last word in the buffer if it's incomplete
+                buffer = words.pop() if words else ""
             else:
                 buffer = ""
 
-            # Return each word with a space
             for word in words:
                 print(word, end=" ", flush=True)
                 yield word + " "
 
-        # Yield any remaining buffered word
         if buffer:
-            # print(buffer, end=" ", flush=True)
             yield buffer + " "
 
-    # Return the generator for SSE support
     return {"answer": stream_generator()}
+
 
 # Compile application and make state graph
 graph_builder = StateGraph(State).add_sequence([retrieve, generate])

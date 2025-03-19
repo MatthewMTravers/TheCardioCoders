@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { MessageCircle, Send, Dumbbell, Apple, Calendar } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const ChatInterface = () => {
   const [messages, setMessages] = useState([
@@ -160,7 +162,24 @@ const ChatInterface = () => {
                     : "bg-gray-100 text-gray-800 rounded-bl-none"
                 }`}
               >
-                {message.content}
+                {message.type === "bot" ? (
+                  <ReactMarkdown
+                  remarkPlugins={[remarkGfm]} //this allows for bullet point support
+                  components={{
+                    h1: ({ node, ...props }) => <h1 className="text-2xl font-bold" {...props} />,
+                    h2: ({ node, ...props }) => <h2 className="text-xl font-semibold" {...props} />,
+                    h3: ({ node, ...props }) => <h3 className="text-lg font-medium" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
+                    ol: ({ node, ...props }) => <ol className="list-decimal pl-5" {...props} />,
+                    li: ({ node, ...props }) => <li className="mb-1" {...props} />,
+                    p: ({ node, ...props }) => <p className="mb-2" {...props} />,
+                  }}
+                  >
+                    {message.content}
+                  </ReactMarkdown>
+                ) : (
+                  message.content  
+                )}
               </div>
             </div>
           ))}
