@@ -33,28 +33,42 @@ const ChatInterface = () => {
       // Function to process each chunk of the stream
       const processChunk = (chunk) => {
         const lines = chunk.split('\n\n');
-
+      
         for (const line of lines) {
           if (line.startsWith('data: ')) {
-            const data = line.substring(6); // Remove 'data: ' prefix
-            partialMessage += data + " ";
+            let data = line.substring(6); // Remove 'data: ' prefix
+      
+            // Improve spacing for Markdown
+            if (
+              data.match(/^#{1,6}\s/) || // Headings
+              data.match(/^\*\s/) ||     // Unordered list
+              data.match(/^\d+\.\s/) ||  // Ordered list
+              data.match(/^\*\*.+\*\*$/) || // Bold line
+              data.match(/^\*.+\*$/)       // Italic line
+            ) {
+              data = '\n\n' + data; // Double newline before block-style elements
+            } else if (data.trim().length > 0 && !partialMessage.endsWith('\n')) {
+              data = ' ' + data; // Add space between inline segments
+            }
+      
+            partialMessage += data;
+      
             setMessages((prev) => {
               const lastMessage = prev[prev.length - 1];
-              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
-                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() + "." }];
+              if (lastMessage && lastMessage.type === "bot") {
+                return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() }];
               } else {
-                return [...prev, { type: "bot", content: partialMessage.trim() + "." }];
+                return [...prev, { type: "bot", content: partialMessage.trim() }];
               }
             });
-
-            // Set loading to false as soon as the first chunk is received
+      
             if (!firstChunkReceived) {
               setLoading(false);
               firstChunkReceived = true;
             }
           }
         }
-      };
+      };      
 
       const readChunk = async () => {
         const { done, value } = await reader.read();
@@ -64,7 +78,7 @@ const ChatInterface = () => {
           if (partialMessage) {
             setMessages((prev) => {
               const lastMessage = prev[prev.length - 1];
-              if (lastMessage && lastMessage.type === "bot" && lastMessage.content.endsWith(".")) {
+              if (lastMessage && lastMessage.type === "bot") {
                 return [...prev.slice(0, -1), { type: "bot", content: partialMessage.trim() }];
               } else {
                 return [...prev, { type: "bot", content: partialMessage.trim() }];
@@ -108,7 +122,7 @@ const ChatInterface = () => {
       equipment: "Guide me through gym equipment",
     };
     const selectedMessage = quickActions[action];
-    setInput('');
+    setInput("");
     sendMessage(selectedMessage);
   };
 
@@ -164,21 +178,21 @@ const ChatInterface = () => {
               >
                 {message.type === "bot" ? (
                   <ReactMarkdown
-                  remarkPlugins={[remarkGfm]} //this allows for bullet point support
-                  components={{
-                    h1: ({ node, ...props }) => <h1 className="text-2xl font-bold" {...props} />,
-                    h2: ({ node, ...props }) => <h2 className="text-xl font-semibold" {...props} />,
-                    h3: ({ node, ...props }) => <h3 className="text-lg font-medium" {...props} />,
-                    ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
-                    ol: ({ node, ...props }) => <ol className="list-decimal pl-5" {...props} />,
-                    li: ({ node, ...props }) => <li className="mb-1" {...props} />,
-                    p: ({ node, ...props }) => <p className="mb-2" {...props} />,
-                  }}
+                    remarkPlugins={[remarkGfm]} // Enables bullet points, bold text, etc.
+                    components={{
+                      h1: ({ node, ...props }) => <h1 className="text-2xl font-bold" {...props} />,
+                      h2: ({ node, ...props }) => <h2 className="text-xl font-semibold" {...props} />,
+                      h3: ({ node, ...props }) => <h3 className="text-lg font-medium" {...props} />,
+                      ul: ({ node, ...props }) => <ul className="list-disc pl-5" {...props} />,
+                      ol: ({ node, ...props }) => <ol className="list-decimal pl-5" {...props} />,
+                      li: ({ node, ...props }) => <li className="mb-1" {...props} />,
+                      p: ({ node, ...props }) => <p className="mb-2" {...props} />,
+                    }}
                   >
                     {message.content}
                   </ReactMarkdown>
                 ) : (
-                  message.content  
+                  message.content
                 )}
               </div>
             </div>
