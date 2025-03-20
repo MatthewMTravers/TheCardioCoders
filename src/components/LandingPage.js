@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Dumbbell, Brain, Apple, BarChart, ArrowRight, MessageCircle } from 'lucide-react';
+import { Dumbbell, Brain, Apple, ArrowRight, MessageCircle } from 'lucide-react';
 
 const LandingPage = () => {
   const navigate = useNavigate();

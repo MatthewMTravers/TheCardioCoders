@@ -21,6 +21,10 @@ volumes/milvus/etcd/member/snap/*
 volumes/milvus/etcd/member/wal/*
 volumes/milvus/rdb_data/*
 volumes/milvus/rdb_data_meta_kv/*
+volumes/milvus/
+volumes/etcd/
+volumes/minio/
+
 
 # Temporary files (if any)
 *.tmp
