@@ -1,0 +1,84 @@
+{
+  "exercises": [
+    {
+      "name": "push-up",
+      "variations": ["standard push-up", "pushup", "pushups", "push ups"],
+      "video_url": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "short_url": "https://youtube.com/shorts/wjKX76qzHxM",
+      "difficulty": "beginner",
+      "muscle_groups": ["chest", "triceps", "shoulders"]
+    },
+    {
+      "name": "squat",
+      "variations": ["bodyweight squat", "air squat", "squats"],
+      "video_url": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "short_url": "https://youtube.com/shorts/tVxiIQmIfHY",
+      "difficulty": "beginner",
+      "muscle_groups": ["quadriceps", "hamstrings", "glutes"]
+    },
+    {
+      "name": "plank",
+      "variations": ["forearm plank", "standard plank", "planks"],
+      "video_url": "https://www.youtube.com/watch?v=pSHjTRCQxIw",
+      "short_url": "https://youtube.com/shorts/y-wV4Venusw",
+      "difficulty": "beginner",
+      "muscle_groups": ["core", "shoulders", "back"]
+    },
+    {
+      "name": "pull-up",
+      "variations": ["chinup", "chin-up", "pullup", "pull up"],
+      "video_url": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
+      "short_url": "https://youtube.com/shorts/XB_7En-zf_M",
+      "difficulty": "intermediate",
+      "muscle_groups": ["back", "biceps", "shoulders"]
+    },
+    {
+      "name": "lunges",
+      "variations": ["forward lunge", "walking lunge", "reverse lunge", "lunge"],
+      "video_url": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
+      "short_url": "https://youtube.com/shorts/9blW_j9ppkU",
+      "difficulty": "beginner",
+      "muscle_groups": ["quadriceps", "hamstrings", "glutes"]
+    },
+    {
+      "name": "burpee",
+      "variations": ["burpees", "full burpee"],
+      "video_url": "https://www.youtube.com/watch?v=TU8QYVW0gDU",
+      "short_url": "https://youtube.com/shorts/cJaZs-c27Io",
+      "difficulty": "intermediate",
+      "muscle_groups": ["full body", "cardio"]
+    },
+    {
+      "name": "mountain climber",
+      "variations": ["mountain climbers"],
+      "video_url": "https://www.youtube.com/watch?v=nmwgirgXLYM",
+      "short_url": "https://youtube.com/shorts/wQq3ybaLZeA",
+      "difficulty": "beginner",
+      "muscle_groups": ["core", "shoulders", "cardio"]
+    },
+    {
+      "name": "deadlift",
+      "variations": ["conventional deadlift", "romanian deadlift", "sumo deadlift"],
+      "video_url": "https://www.youtube.com/watch?v=hCDzSR6bW10",
+      "short_url": "https://youtube.com/shorts/ytGaGIn3SjE",
+      "difficulty": "intermediate",
+      "muscle_groups": ["back", "hamstrings", "glutes"]
+    },
+    {
+      "name": "bench press",
+      "variations": ["barbell bench press", "dumbbell bench press"],
+      "video_url": "https://www.youtube.com/watch?v=4Y2ZdHCOXok",
+      "short_url": "https://youtube.com/shorts/wXvM8qoEEFw",
+      "difficulty": "intermediate",
+      "muscle_groups": ["chest", "triceps", "shoulders"]
+    },
+    {
+      "name": "overhead press",
+      "variations": ["military press", "shoulder press", "standing press"],
+      "video_url": "https://www.youtube.com/watch?v=2yjwXTZQDDI",
+      "short_url": "https://youtube.com/shorts/8E4oWpi0RkA",
+      "difficulty": "intermediate",
+      "muscle_groups": ["shoulders", "triceps"]
+    }
+  ]
+}
