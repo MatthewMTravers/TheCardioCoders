@@ -6,7 +6,7 @@ from langchain.schema import Document
 from langchain_community.document_loaders import JSONLoader
 
 # Load JSON data - can be changed as needed
-raw_json_docs = ["exercises.json", "exercises1.json", "exercises2.json"]
+raw_json_docs = ["src/data/exercises/exercises1.json",  "src/data/exercises/exercises2.json",  "src/data/exercises/exercises3.json",  "src/data/exercises/exercises4.json",  "src/data/exercises/exercises5.json"]
 
 documents = []
 num = 0

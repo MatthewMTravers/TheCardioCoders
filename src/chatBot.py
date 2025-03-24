@@ -20,14 +20,16 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('data/faiss_index.index')
-embeddings_matrix = np.load('data/embeddings.npy')
+index = faiss.read_index('src/faiss_index.index')
+embeddings_matrix = np.load('src/embeddings.npy')
 
 # Current hardcoded JSON response
 raw_json_docs = [
-    "data/exercises/exercises1.json", 
-    "data/exercises/exercises2.json", 
-    "data/exercises/exercises3.json"
+    "src/data/exercises/exercises1.json", 
+    "src/data/exercises/exercises2.json", 
+    "src/data/exercises/exercises3.json",
+    "src/data/exercises/exercises4.json",
+    "src/data/exercises/exercises5.json"
     ]
 
 documents = []
@@ -75,10 +77,10 @@ def query_vector_store(query, k=5):
 ################################################################################
 
 # TODO: look into using different prompt, as mentioned in the lecture recording
-with open("prompts/workoutPlanPrompt", "r") as file:
+with open("src/prompts/workoutPlanPrompt", "r") as file:
     workoutPlanPrompt = file.read()
 
-with open("prompts/conciseAnswerPrompt", "r") as file:
+with open("src/prompts/conciseAnswerPrompt", "r") as file:
     conciseAnswerPrompt = file.read()
 
 
