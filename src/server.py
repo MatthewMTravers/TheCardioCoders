@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 from chatBot import graph
-import time
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -15,7 +15,15 @@ def stream():
         try:
             response_stream = graph.invoke({"question": user_question})
             generated_response = response_stream["answer"]
+            video_links = response_stream.get("formatted_video_links", [])
 
+            # First, send the video links as a special message
+            if video_links:
+                yield ("data: VIDEO_LINKS_START\n\n")
+                yield f"data: {json.dumps(video_links)}\n\n"
+                yield ("data: VIDEO_LINKS_END\n\n")
+
+            # Then send the text response
             if hasattr(generated_response, '__iter__'):
                 buffer = ""
 
@@ -33,12 +41,12 @@ def stream():
                     yield f"data: {buffer}\n\n"
 
         except Exception as e:
-            print(f"[Stream Error] {e}")
+            print(f"[Stream Error]: {e}")
+            yield ("data: Sorry, I encountered an error processing your request.\n\n")
 
     return Response(generate_response(), content_type="text/event-stream")
 
-
-# Non-streaming response dump
+# Non-streaming response
 @app.route('/chat', methods=['POST'])
 def handle_message():
     # Get question from the user to be processed by the bot
@@ -48,7 +56,13 @@ def handle_message():
     # Invoke state graph created in 'chatBot.py'
     response = graph.invoke({"question": user_question})
     
-    return jsonify({"answer": response["answer"]})
+    # Construct the response with both text and video links
+    response_data = {
+        "answer": response["answer"],
+        "video_links": response.get("formatted_video_links", [])
+    }
+    
+    return jsonify(response_data)
 
 if __name__ == '__main__':
     app.run(debug=True, threaded=True)

@@ -4,7 +4,8 @@ import {
   Send,
   Dumbbell,
   Apple,
-  Calendar,
+  Calendar, 
+  Youtube,
   ThumbsUp,
   ThumbsDown,
   RefreshCw,
@@ -18,6 +19,7 @@ import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import VideoLinks from "./VideoLinks";
 
 const ChatInterface = () => {
   const navigate = useNavigate();
@@ -32,6 +34,7 @@ const ChatInterface = () => {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [videoLinks, setVideoLinks] = useState([]);
   const [savedExercises, setSavedExercises] = useState([]);
   const [showSavedExercises, setShowSavedExercises] = useState(false);
   const [expandedExercises, setExpandedExercises] = useState({});
@@ -50,23 +53,52 @@ const ChatInterface = () => {
       content: userMessage,
     };
     setMessages((prev) => [...prev, newUserMessage]);
+    setVideoLinks([]); // Clear previous video links
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${userMessage}`);
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${encodeURIComponent(userMessage)}`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let partialMessage = '';
       let firstChunkReceived = false;
       const botMessageId = (Date.now() + 1).toString();
+      let collectingVideoLinks = false;
+      let videoLinksData = "";
 
       const processChunk = (chunk) => {
         const lines = chunk.split('\n\n');
         for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            let data = line.substring(6);
-
+          if (line.startsWith("data: ")) {
+            let data = line.substring(6); // Remove 'data: ' prefix
+      
+            // Handle video links special messages
+            if (data === "VIDEO_LINKS_START") {
+              collectingVideoLinks = true;
+              videoLinksData = "";
+              continue;
+            }
+      
+            if (data === "VIDEO_LINKS_END") {
+              collectingVideoLinks = false;
+              try {
+                const parsedLinks = JSON.parse(videoLinksData);
+                setVideoLinks(parsedLinks);
+              } catch (e) {
+                console.error("Error parsing video links:", e);
+              }
+              continue;
+            }
+      
+            if (collectingVideoLinks) {
+              videoLinksData += data;
+              continue;
+            }
+      
             // Markdown formatting
             if (
               data.match(/^#{1,6}\s/) ||
@@ -75,25 +107,38 @@ const ChatInterface = () => {
               data.match(/^\*\*.+\*\*$/) ||
               data.match(/^\*.+\*$/)
             ) {
-              data = '\n\n' + data;
-            } else if (data.trim().length > 0 && !partialMessage.endsWith('\n')) {
-              data = ' ' + data;
+              data = "\n\n" + data;
+            } else if (data.trim().length > 0 && !partialMessage.endsWith("\n")) {
+              data = " " + data;
             }
-
+      
             partialMessage += data;
-
+      
+            // Update or add the message
             setMessages((prev) => {
               const lastMessage = prev[prev.length - 1];
-              if (lastMessage?.type === 'bot') {
-                return [...prev.slice(0, -1), { ...lastMessage, content: partialMessage.trim() }];
+              if (lastMessage?.type === "bot" && lastMessage.partial) {
+                // Update existing partial message
+                return [
+                  ...prev.slice(0, -1),
+                  { ...lastMessage, content: partialMessage.trim() },
+                ];
               } else {
+                // Add new bot message
                 return [
                   ...prev,
-                  { id: botMessageId, type: 'bot', content: partialMessage.trim(), rating: null },
+                  {
+                    id: botMessageId,
+                    type: "bot",
+                    content: partialMessage.trim(),
+                    rating: null,
+                    partial: true,
+                  },
                 ];
               }
             });
-
+      
+            // Set loading to false as soon as the first chunk is received
             if (!firstChunkReceived) {
               setLoading(false);
               firstChunkReceived = true;
@@ -101,14 +146,22 @@ const ChatInterface = () => {
           }
         }
       };
-
+      
       const readChunk = async () => {
         const { done, value } = await reader.read();
-        if (done) return;
-
+        if (done) {
+          // Stream finished, finalize any remaining partial message
+          setMessages((prev) => {
+            return prev.map((msg) =>
+              msg.partial ? { ...msg, partial: false } : msg
+            );
+          });
+          return;
+        }
+      
         const chunk = decoder.decode(value);
         processChunk(chunk);
-        readChunk();
+        readChunk(); // Read the next chunk
       };
 
       readChunk();
@@ -211,56 +264,98 @@ const ChatInterface = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="flex gap-2 p-4">
+        <div className="flex gap-2 p-4 overflow-x-auto">
           <button
             onClick={() => handleQuickAction("workout")}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors whitespace-nowrap"
           >
             <Dumbbell className="w-4 h-4" />
             Workout Plan
           </button>
           <button
             onClick={() => handleQuickAction("meal")}
-            className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors whitespace-nowrap"
           >
             <Apple className="w-4 h-4" />
             Meal Plan
           </button>
           <button
             onClick={() => handleQuickAction("equipment")}
-            className="flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors whitespace-nowrap"
           >
             <Calendar className="w-4 h-4" />
             Equipment Guide
+          </button>
+          <button
+            onClick={() => sendMessage("Show me how to do a proper push-up")}
+            className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 transition-colors whitespace-nowrap"
+          >
+            <Youtube className="w-4 h-4" />
+            Exercise Demos
           </button>
         </div>
 
         {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {messages.map((message) => (
-            <div key={message.id} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
+          {messages.map((message, index) => (
+            <div
+              key={message.id || index}
+              className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
               <div className="max-w-[70%]">
-                <div className={`p-3 rounded-lg ${message.type === 'user' ? 'bg-blue-500 text-white rounded-br-none' : 'bg-gray-100 text-gray-800 rounded-bl-none'}`}>
+                <div
+                  className={`p-3 rounded-lg ${
+                    message.type === 'user'
+                      ? 'bg-blue-500 text-white rounded-br-none'
+                      : 'bg-gray-100 text-gray-800 rounded-bl-none'
+                  }`}
+                >
                   {message.type === 'bot' ? (
                     <>
                       {formatContent(message.content)}
                       {message.id !== '1' && (
-                        <button onClick={() => saveExercise(message.content)} className="mt-2 px-3 py-1 bg-green-500 text-white text-sm rounded hover:bg-green-600">
+                        <button
+                          onClick={() => saveExercise(message.content)}
+                          className="mt-2 px-3 py-1 bg-green-500 text-white text-sm rounded hover:bg-green-600"
+                        >
                           <Save className="w-4 h-4 inline-block mr-1" /> Save
                         </button>
                       )}
                     </>
-                  ) : message.content}
+                  ) : (
+                    message.content
+                  )}
                 </div>
+
+                {/* Show video links below the last bot message if available */}
+                {message.type === 'bot' &&
+                  index === messages.length - 1 &&
+                  videoLinks.length > 0 && <VideoLinks videoLinks={videoLinks} />}
+
+                {/* Rating and regenerate buttons for bot messages */}
                 {message.type === 'bot' && (
                   <div className="flex items-center gap-2 mt-2">
-                    <button onClick={() => handleRating(message.id, 'up')} className={`p-1 rounded hover:bg-gray-100 ${message.rating === 'up' ? 'text-green-500' : 'text-gray-500'}`}>
+                    <button
+                      onClick={() => handleRating(message.id, 'up')}
+                      className={`p-1 rounded hover:bg-gray-100 ${
+                        message.rating === 'up' ? 'text-green-500' : 'text-gray-500'
+                      }`}
+                    >
                       <ThumbsUp className="w-4 h-4" />
                     </button>
-                    <button onClick={() => handleRating(message.id, 'down')} className={`p-1 rounded hover:bg-gray-100 ${message.rating === 'down' ? 'text-red-500' : 'text-gray-500'}`}>
+                    <button
+                      onClick={() => handleRating(message.id, 'down')}
+                      className={`p-1 rounded hover:bg-gray-100 ${
+                        message.rating === 'down' ? 'text-red-500' : 'text-gray-500'
+                      }`}
+                    >
                       <ThumbsDown className="w-4 h-4" />
                     </button>
-                    <button onClick={() => handleRegenerate(message.id)} disabled={loading} className="p-1 rounded hover:bg-gray-100 text-gray-500">
+                    <button
+                      onClick={() => handleRegenerate(message.id)}
+                      disabled={loading}
+                      className="p-1 rounded hover:bg-gray-100 text-gray-500"
+                    >
                       <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                     </button>
                   </div>
@@ -268,63 +363,39 @@ const ChatInterface = () => {
               </div>
             </div>
           ))}
-          {loading && <div className="flex justify-start"><div className="bg-gray-100 text-gray-800 p-3 rounded-lg">. . .</div></div>}
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "600ms" }}></div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* Saved Exercises Toggle & Download */}
-        {savedExercises.length > 0 && (
-          <div className="p-4 border-t bg-gray-50 text-right">
-            <button onClick={() => setShowSavedExercises(!showSavedExercises)} className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 mr-2">
-              <Eye className="w-5 h-5 inline-block mr-1" /> {showSavedExercises ? "Hide Saved Exercises" : "Show Saved Exercises"}
-            </button>
-            <button onClick={downloadExercisesPDF} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-              <Download className="w-5 h-5 inline-block mr-1" /> Download PDF
-            </button>
-          </div>
-        )}
-
-        {/* Saved Exercises List */}
-        {showSavedExercises && savedExercises.length > 0 && (
-          <div className="p-4 border-t bg-gray-50">
-            <h2 className="text-lg font-semibold mb-2">Saved Exercises</h2>
-            <ul className="list-none text-gray-700">
-              {savedExercises.map((exercise, idx) => {
-                const isExpanded = expandedExercises[idx];
-                const previewText = exercise.split('\n')[0].slice(0, 100) + "...";
-                return (
-                  <li key={idx} className="bg-yellow-100 p-3 rounded-md mb-2 shadow">
-                    <div className="flex justify-between items-start">
-                      <div className="whitespace-pre-line overflow-hidden">{isExpanded ? formatContent(exercise) : previewText}</div>
-                      <div className="flex flex-col ml-3 items-end gap-2">
-                        <button onClick={() => setExpandedExercises((prev) => ({ ...prev, [idx]: !prev[idx] }))} className="text-blue-500 hover:text-blue-700 text-sm">
-                          {isExpanded ? "Show Less ▲" : "Show More ▼"}
-                        </button>
-                        <button onClick={() => removeExercise(idx)} className="text-red-500 hover:text-red-700">
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
-
         {/* Input Area */}
-        <div className="border-t p-4 flex gap-2">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSend()}
-            placeholder="Ask about workouts, meal plans, or equipment..."
-            className="flex-1 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
-            disabled={loading}
-          />
-          <button onClick={handleSend} disabled={loading} className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
-            <Send className="w-5 h-5" />
-          </button>
+        <div className="border-t p-4">
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              placeholder="Ask about workouts, meal plans, or equipment..."
+              className="flex-1 p-2 border rounded-lg focus:outline-none focus:border-blue-500"
+              disabled={loading}
+            />
+            <button
+              onClick={handleSend}
+              className={`p-2 ${loading ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white rounded-lg transition-colors`}
+              disabled={loading}
+            >
+              <Send className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
