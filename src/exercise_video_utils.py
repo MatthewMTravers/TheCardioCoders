@@ -7,7 +7,7 @@ from typing import Dict, List, Optional, Tuple, Union
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Path to the exercise video mapping file
-EXERCISE_VIDEO_MAPPING_PATH = os.path.join(script_dir, 'exercise_videos.json')
+EXERCISE_VIDEO_MAPPING_PATH = os.path.join(script_dir, 'data/exercises/exercise_videos.json')
 
 def load_exercise_video_mapping() -> Dict:
     """Load the exercise video mapping from the JSON file."""

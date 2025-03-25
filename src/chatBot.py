@@ -105,8 +105,8 @@ with open("prompts/conciseAnswerPrompt", "r") as file:
     conciseAnswerPrompt = file.read()
 
 # Custom prompt for 'Workout Plans' with video links
-with open("prompts/workoutPlanPromptWithLink", "r") as file:
-    workoutPlanPromptWithLink = file.read()
+with open("prompts/workoutPlanWithLinkPrompt", "r") as file:
+    workoutPlanWithLinkPrompt = file.read()
 
 # Updated State definition
 class State(TypedDict):
@@ -139,12 +139,12 @@ def generate(state: State):
     full_context = docs_content + video_links_info
     
     # Choose the appropriate prompt template
-    if "workout plan" in state["question"].lower() or "exercise routine" in state["question"].lower():
+    if "link" in state["question"].lower() or "video" in state["question"].lower() or "show me" in state["question"].lower():
         prompt_text = workoutPlanWithLinkPrompt.format(context=full_context, question=state["question"])
     elif "meal plan" in state["question"].lower():
         prompt_text = conciseAnswerPrompt.format(context=docs_content, question=state["question"])
     else:
-        prompt_text = workoutPlanPromptWithLink.format(context=full_context, question=state["question"])
+        prompt_text = workoutPlanPrompt.format(context=full_context, question=state["question"])
 
     # Stream response from Ollama using the chosen prompt
     response_stream = ollama.stream(prompt_text)
