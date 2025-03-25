@@ -29,22 +29,22 @@ embeddings_matrix = np.load(os.path.join(script_dir, 'data/embeddings.npy'))
 
 # Define paths to JSON files
 raw_json_docs = [
-    os.path.join(script_dir, 'Exercises/exercises1.json'),
-    os.path.join(script_dir, 'Exercises/exercises2.json'),
-    os.path.join(script_dir, 'Exercises/exercises3.json'),
-    os.path.join(script_dir, 'Exercises/exercises4.json'),
-    os.path.join(script_dir, 'Exercises/exercises5.json'),
-    os.path.join(script_dir, 'stretches.json'),
-    os.path.join(script_dir, 'Food/foodfacts1.json'),
-    os.path.join(script_dir, 'Food/foodfacts2.json'),
-    os.path.join(script_dir, 'Food/foodfacts3.json'),
-    os.path.join(script_dir, 'Food/foodfacts4.json'),
-    os.path.join(script_dir, 'Food/foodfacts5.json'),
-    os.path.join(script_dir, 'Food/foodfacts6.json'),
-    os.path.join(script_dir, 'Food/foodfacts7.json'),
-    os.path.join(script_dir, 'Food/foodfacts8.json'),
-    os.path.join(script_dir, 'Food/foodfacts9.json'),
-    os.path.join(script_dir, 'Food/foodfacts10.json'),
+    os.path.join(script_dir, 'data/Exercises/exercises1.json'),
+    os.path.join(script_dir, 'data/Exercises/exercises2.json'),
+    os.path.join(script_dir, 'data/Exercises/exercises3.json'),
+    os.path.join(script_dir, 'data/Exercises/exercises4.json'),
+    os.path.join(script_dir, 'data/Exercises/exercises5.json'),
+    os.path.join(script_dir, 'data/stretches.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts1.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts2.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts3.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts4.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts5.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts6.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts7.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts8.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts9.json'),
+    os.path.join(script_dir, 'data/Food/foodfacts10.json'),
 ]
 
 documents = []
