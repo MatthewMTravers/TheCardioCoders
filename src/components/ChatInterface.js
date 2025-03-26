@@ -64,85 +64,81 @@ const ChatInterface = () => {
       };
       setMessages((prev) => [...prev, newUserMessage]);
     }
-
+  
     try {
       const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${userMessage}`);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
+  
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let partialMessage = '';
       let firstChunkReceived = false;
       const botMessageId = (Date.now() + 1).toString();
-
+  
       const processChunk = (chunk) => {
         const lines = chunk.split('\n\n');
         for (const line of lines) {
           if (line.startsWith('data: ')) {
             let data = line.substring(6);
-
+  
             // Check for video URL in the response
             const videoMatch = data.match(/(https?:\/\/\S+\.(?:mp4|avi|mov|webm|youtube\.com\/watch\?v=|youtu\.be\/)[\w-]+)/);
             if (videoMatch) {
               setVideoUrl(videoMatch[1]);
-            }
-
-            // Markdown formatting
-            if (
-              data.match(/^#{1,6}\s/) ||
-              data.match(/^\*\s/) ||
-              data.match(/^\d+\.\s/) ||
-              data.match(/^\*\*.+\*\*$/) ||
-              data.match(/^\*.+\*$/)
-            ) {
-              data = '\n\n' + data;
-            } else if (data.trim().length > 0 && !partialMessage.endsWith('\n')) {
-              data = ' ' + data;
-            }
-
-            partialMessage += data;
-
-            setMessages((prev) => {
-              const lastMessage = prev[prev.length - 1];
-              if (lastMessage?.type === 'bot') {
-                return [...prev.slice(0, -1), { ...lastMessage, content: partialMessage.trim() }];
-              } else {
-                return [
-                  ...prev,
-                  { id: botMessageId, type: 'bot', content: partialMessage.trim(), rating: null },
-                ];
-              }
-            });
-
-            if (!firstChunkReceived) {
-              setLoading(false);
-              firstChunkReceived = true;
+              setShowVideoPlayer(true);
             }
           }
         }
       };
-
+  
       const readChunk = async () => {
         const { done, value } = await reader.read();
         if (done) return;
-
+  
         const chunk = decoder.decode(value);
         processChunk(chunk);
         readChunk();
       };
-
+  
       readChunk();
     } catch (err) {
       console.error('Error sending message:', err);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: Date.now().toString(),
-          type: 'bot',
-          content: "Sorry, I couldn't process that request.",
-          rating: null,
-        },
-      ]);
+      
+      // Check if the quick action was for a video
+      const isVideoAction = userMessage.toLowerCase().includes('video');
+      
+      if (isVideoAction) {
+        // For video-specific requests, show a sample video
+        const testVideoUrls = [
+          'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Example YouTube video
+        ];
+        
+        const fallbackVideoUrl = testVideoUrls[Math.floor(Math.random() * testVideoUrls.length)];
+        setVideoUrl(fallbackVideoUrl);
+        setShowVideoPlayer(true);
+        
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now().toString(),
+            type: 'bot',
+            content: "I couldn't process the request fully, but here's a sample video.",
+            rating: null,
+          },
+        ]);
+      } else {
+        // For other requests, show the original error message
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now().toString(),
+            type: 'bot',
+            content: "Sorry, I couldn't process that request.",
+            rating: null,
+          },
+        ]);
+      }
+      
       setLoading(false);
     }
   };
