@@ -227,6 +227,11 @@ const ChatInterface = () => {
     setInput('');
   };
 
+  const isLastBotMessage = (messageId) => {
+    const botMessages = messages.filter(msg => msg.type === 'bot' && msg.id !== '1');
+    return botMessages.length > 0 && botMessages[botMessages.length - 1].id === messageId;
+  };
+
   return (
     <div className="flex h-screen bg-gray-100">
       <div className="flex flex-col w-full max-w-4xl mx-auto p-4 bg-white shadow-lg my-4 rounded-lg">
@@ -337,13 +342,15 @@ const ChatInterface = () => {
                     <button onClick={() => handleRating(message.id, 'down')} className={`p-1 rounded hover:bg-gray-100 ${message.rating === 'down' ? 'text-red-500' : 'text-gray-500'}`}>
                       <ThumbsDown className="w-4 h-4" />
                     </button>
-                    <button 
-                      onClick={handleRegenerate} 
-                      disabled={loading}
-                      className="p-1 rounded hover:bg-gray-100 text-gray-500"
-                    >
-                      <RefreshCw className="w-4 h-4" />
-                    </button>
+                    {isLastBotMessage(message.id) && (
+                      <button 
+                        onClick={handleRegenerate} 
+                        disabled={loading}
+                        className="p-1 rounded hover:bg-gray-100 text-gray-500"
+                      >
+                        <RefreshCw className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
