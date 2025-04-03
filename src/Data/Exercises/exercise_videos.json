@@ -2,7 +2,7 @@
   "exercises": [
     {
       "name": "push-up",
-      "variations": ["standard push-up", "pushup", "pushups", "push ups"],
+      "variations": ["standard push-up", "pushup", "pushups", "push ups", "diamond push-up", "wide push-up", "decline push-up", "incline push-up", "clapping push-up"],
       "video_url": "https://www.youtube.com/watch?v=IODxDxX7oi4",
       "short_url": "https://youtube.com/shorts/wjKX76qzHxM",
       "difficulty": "beginner",
@@ -10,7 +10,7 @@
     },
     {
       "name": "squat",
-      "variations": ["bodyweight squat", "air squat", "squats"],
+      "variations": ["bodyweight squat", "air squat", "squats", "goblet squat", "barbell back squat", "front squat", "overhead squat", "split squat", "box squat"],
       "video_url": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
       "short_url": "https://youtube.com/shorts/tVxiIQmIfHY",
       "difficulty": "beginner",
@@ -18,7 +18,7 @@
     },
     {
       "name": "plank",
-      "variations": ["forearm plank", "standard plank", "planks"],
+      "variations": ["forearm plank", "standard plank", "planks", "side plank", "reverse plank", "plank with shoulder tap", "plank jacks", "up-down plank"],
       "video_url": "https://www.youtube.com/watch?v=pSHjTRCQxIw",
       "short_url": "https://youtube.com/shorts/y-wV4Venusw",
       "difficulty": "beginner",
@@ -26,7 +26,7 @@
     },
     {
       "name": "pull-up",
-      "variations": ["chinup", "chin-up", "pullup", "pull up"],
+      "variations": ["chinup", "chin-up", "pullup", "pull up", "wide grip pull-up", "neutral grip pull-up", "commando pull-up", "archer pull-up", "L-sit pull-up"],
       "video_url": "https://www.youtube.com/watch?v=eGo4IYlbE5g",
       "short_url": "https://youtube.com/shorts/XB_7En-zf_M",
       "difficulty": "intermediate",
@@ -34,7 +34,7 @@
     },
     {
       "name": "lunges",
-      "variations": ["forward lunge", "walking lunge", "reverse lunge", "lunge"],
+      "variations": ["forward lunge", "walking lunge", "reverse lunge", "lunge", "lateral lunge", "curtsy lunge", "Bulgarian split squat", "deficit lunge"],
       "video_url": "https://www.youtube.com/watch?v=QOVaHwm-Q6U",
       "short_url": "https://youtube.com/shorts/9blW_j9ppkU",
       "difficulty": "beginner",
@@ -42,7 +42,7 @@
     },
     {
       "name": "burpee",
-      "variations": ["burpees", "full burpee"],
+      "variations": ["burpees", "full burpee", "half burpee", "burpee with push-up", "burpee with pull-up", "mountain climber burpee", "tuck jump burpee"],
       "video_url": "https://www.youtube.com/watch?v=TU8QYVW0gDU",
       "short_url": "https://youtube.com/shorts/cJaZs-c27Io",
       "difficulty": "intermediate",
@@ -50,7 +50,7 @@
     },
     {
       "name": "mountain climber",
-      "variations": ["mountain climbers"],
+      "variations": ["mountain climbers", "slow mountain climber", "cross-body mountain climber", "elevated mountain climber", "slider mountain climber"],
       "video_url": "https://www.youtube.com/watch?v=nmwgirgXLYM",
       "short_url": "https://youtube.com/shorts/wQq3ybaLZeA",
       "difficulty": "beginner",
@@ -58,7 +58,7 @@
     },
     {
       "name": "deadlift",
-      "variations": ["conventional deadlift", "romanian deadlift", "sumo deadlift"],
+      "variations": ["conventional deadlift", "romanian deadlift", "sumo deadlift", "trap bar deadlift", "single leg deadlift", "deficit deadlift", "stiff-legged deadlift"],
       "video_url": "https://www.youtube.com/watch?v=hCDzSR6bW10",
       "short_url": "https://youtube.com/shorts/ytGaGIn3SjE",
       "difficulty": "intermediate",
@@ -66,7 +66,7 @@
     },
     {
       "name": "bench press",
-      "variations": ["barbell bench press", "dumbbell bench press"],
+      "variations": ["barbell bench press", "dumbbell bench press", "incline bench press", "decline bench press", "close grip bench press", "spoto press", "floor press"],
       "video_url": "https://www.youtube.com/watch?v=4Y2ZdHCOXok",
       "short_url": "https://youtube.com/shorts/wXvM8qoEEFw",
       "difficulty": "intermediate",
@@ -74,11 +74,403 @@
     },
     {
       "name": "overhead press",
-      "variations": ["military press", "shoulder press", "standing press"],
+      "variations": ["military press", "shoulder press", "standing press", "seated dumbbell press", "push press", "behind the neck press", "arnold press", "landmine press"],
       "video_url": "https://www.youtube.com/watch?v=2yjwXTZQDDI",
       "short_url": "https://youtube.com/shorts/8E4oWpi0RkA",
       "difficulty": "intermediate",
       "muscle_groups": ["shoulders", "triceps"]
+    },
+    {
+      "name": "bent over row",
+      "variations": ["barbell row", "pendlay row", "dumbbell row", "inverted row", "meadows row", "t-bar row", "sealed row"],
+      "video_url": "https://www.youtube.com/watch?v=FWJR5Ve8bnQ",
+      "short_url": "https://youtube.com/shorts/kBWAon7ItDw",
+      "difficulty": "intermediate",
+      "muscle_groups": ["back", "biceps", "shoulders"]
+    },
+    {
+      "name": "lat pulldown",
+      "variations": ["wide grip lat pulldown", "close grip lat pulldown", "v-bar pulldown", "straight arm pulldown", "single arm lat pulldown", "behind the neck pulldown"],
+      "video_url": "https://www.youtube.com/watch?v=CAwf7n6Luuc",
+      "short_url": "https://youtube.com/shorts/u3gQT0sEFHg",
+      "difficulty": "beginner",
+      "muscle_groups": ["back", "biceps"]
+    },
+    {
+      "name": "bicep curl",
+      "variations": ["barbell curl", "dumbbell curl", "hammer curl", "concentration curl", "preacher curl", "cable curl", "ez-bar curl", "incline curl", "reverse curl"],
+      "video_url": "https://www.youtube.com/watch?v=ykJmrZ5v0Oo",
+      "short_url": "https://youtube.com/shorts/8d2_I4oLzz4",
+      "difficulty": "beginner",
+      "muscle_groups": ["biceps", "forearms"]
+    },
+    {
+      "name": "tricep extension",
+      "variations": ["skull crusher", "overhead tricep extension", "rope pushdown", "dumbbell kickback", "close grip push-up", "diamond push-up", "bench dip"],
+      "video_url": "https://www.youtube.com/watch?v=nRiJVZDpdL0",
+      "short_url": "https://youtube.com/shorts/eBIGu-MFrpY",
+      "difficulty": "beginner",
+      "muscle_groups": ["triceps"]
+    },
+    {
+      "name": "dip",
+      "variations": ["parallel bar dip", "bench dip", "ring dip", "weighted dip", "straight bar dip", "korean dip", "chest dip", "tricep dip"],
+      "video_url": "https://www.youtube.com/watch?v=2z8JmcrW-As",
+      "short_url": "https://youtube.com/shorts/L-k9lF2ykuc",
+      "difficulty": "intermediate",
+      "muscle_groups": ["chest", "triceps", "shoulders"]
+    },
+    {
+      "name": "leg press",
+      "variations": ["45 degree leg press", "vertical leg press", "single leg press", "wide stance leg press", "narrow stance leg press", "hack squat"],
+      "video_url": "https://www.youtube.com/watch?v=IZxyjW7MPJQ",
+      "short_url": "https://youtube.com/shorts/VL47fxBuR5g",
+      "difficulty": "beginner",
+      "muscle_groups": ["quadriceps", "hamstrings", "glutes"]
+    },
+    {
+      "name": "leg extension",
+      "variations": ["machine leg extension", "single leg extension", "banded leg extension", "isometric leg extension"],
+      "video_url": "https://www.youtube.com/watch?v=YyvSfVjQeL0",
+      "short_url": "https://youtube.com/shorts/r8WCyYmBx6s",
+      "difficulty": "beginner",
+      "muscle_groups": ["quadriceps"]
+    },
+    {
+      "name": "leg curl",
+      "variations": ["lying leg curl", "seated leg curl", "standing leg curl", "nordic curl", "single leg curl"],
+      "video_url": "https://www.youtube.com/watch?v=1Tq3QdYUuHs",
+      "short_url": "https://youtube.com/shorts/BzYBkAvdCJY",
+      "difficulty": "beginner",
+      "muscle_groups": ["hamstrings"]
+    },
+    {
+      "name": "calf raise",
+      "variations": ["standing calf raise", "seated calf raise", "single leg calf raise", "donkey calf raise", "leg press calf raise"],
+      "video_url": "https://www.youtube.com/watch?v=-M4-G8p8fmc",
+      "short_url": "https://youtube.com/shorts/YTxQecivmBE",
+      "difficulty": "beginner",
+      "muscle_groups": ["calves"]
+    },
+    {
+      "name": "lateral raise",
+      "variations": ["dumbbell lateral raise", "cable lateral raise", "leaning lateral raise", "bent over lateral raise", "front raise"],
+      "video_url": "https://www.youtube.com/watch?v=3VcKaXpzqRo",
+      "short_url": "https://youtube.com/shorts/h0RCMPDfoYI",
+      "difficulty": "beginner",
+      "muscle_groups": ["shoulders", "traps"]
+    },
+    {
+      "name": "upright row",
+      "variations": ["barbell upright row", "dumbbell upright row", "cable upright row", "smith machine upright row"],
+      "video_url": "https://www.youtube.com/watch?v=VG0nT4aXYlo",
+      "short_url": "https://youtube.com/shorts/Nce_1x6Bx1o",
+      "difficulty": "intermediate",
+      "muscle_groups": ["shoulders", "traps", "biceps"]
+    },
+    {
+      "name": "shrug",
+      "variations": ["barbell shrug", "dumbbell shrug", "trap bar shrug", "behind the back shrug", "cable shrug"],
+      "video_url": "https://www.youtube.com/watch?v=g6qbq4Lf1FI",
+      "short_url": "https://youtube.com/shorts/cYPDttb8kzM",
+      "difficulty": "beginner",
+      "muscle_groups": ["traps", "shoulders"]
+    },
+    {
+      "name": "face pull",
+      "variations": ["cable face pull", "band face pull", "seated face pull", "prone face pull"],
+      "video_url": "https://www.youtube.com/watch?v=eIq5CB9JfKE",
+      "short_url": "https://youtube.com/shorts/LY9vFvpd8ME",
+      "difficulty": "beginner",
+      "muscle_groups": ["rear delts", "traps", "rotator cuff"]
+    },
+    {
+      "name": "hip thrust",
+      "variations": ["barbell hip thrust", "single leg hip thrust", "banded hip thrust", "elevated hip thrust", "glute bridge"],
+      "video_url": "https://www.youtube.com/watch?v=SEdqd1n0cvg",
+      "short_url": "https://youtube.com/shorts/LM3Tg2DgDRU",
+      "difficulty": "beginner",
+      "muscle_groups": ["glutes", "hamstrings"]
+    },
+    {
+      "name": "glute bridge",
+      "variations": ["bodyweight glute bridge", "single leg glute bridge", "banded glute bridge", "weighted glute bridge", "elevated glute bridge"],
+      "video_url": "https://www.youtube.com/watch?v=wPM8icPu6H8",
+      "short_url": "https://youtube.com/shorts/T57vKOTxwSA",
+      "difficulty": "beginner",
+      "muscle_groups": ["glutes", "hamstrings"]
+    },
+    {
+      "name": "russian twist",
+      "variations": ["weighted russian twist", "bodyweight russian twist", "medicine ball russian twist", "elevated russian twist"],
+      "video_url": "https://www.youtube.com/watch?v=wkD8rjkodUI",
+      "short_url": "https://youtube.com/shorts/RgJ6n9A7k7A",
+      "difficulty": "beginner",
+      "muscle_groups": ["core", "obliques"]
+    },
+    {
+      "name": "bicycle crunch",
+      "variations": ["standard bicycle crunch", "reverse bicycle crunch", "weighted bicycle crunch", "slow bicycle crunch"],
+      "video_url": "https://www.youtube.com/watch?v=9FGilxCbdz8",
+      "short_url": "https://youtube.com/shorts/I_vLBleC6bw",
+      "difficulty": "beginner",
+      "muscle_groups": ["core", "obliques"]
+    },
+    {
+      "name": "leg raise",
+      "variations": ["hanging leg raise", "lying leg raise", "captain's chair leg raise", "alternating leg raise", "single leg raise"],
+      "video_url": "https://www.youtube.com/watch?v=l4kQd9eWclE",
+      "short_url": "https://youtube.com/shorts/BcrFYYadpWs",
+      "difficulty": "intermediate",
+      "muscle_groups": ["lower abs", "hip flexors"]
+    },
+    {
+      "name": "crunch",
+      "variations": ["basic crunch", "reverse crunch", "decline crunch", "cable crunch", "weighted crunch", "crunch with twist"],
+      "video_url": "https://www.youtube.com/watch?v=Xyd_fa5zoEU",
+      "short_url": "https://youtube.com/shorts/MKmrqcoCZ-M",
+      "difficulty": "beginner",
+      "muscle_groups": ["abs", "core"]
+    },
+    {
+      "name": "seated row",
+      "variations": ["cable seated row", "machine seated row", "dumbbell seated row", "single arm seated row", "wide grip seated row"],
+      "video_url": "https://www.youtube.com/watch?v=GZbfZ033f74",
+      "short_url": "https://youtube.com/shorts/SulaQaxlUFM",
+      "difficulty": "beginner",
+      "muscle_groups": ["back", "biceps", "shoulders"]
+    },
+    {
+      "name": "good morning",
+      "variations": ["barbell good morning", "seated good morning", "banded good morning", "single leg good morning"],
+      "video_url": "https://www.youtube.com/watch?v=YA-h3n9L4YU",
+      "short_url": "https://youtube.com/shorts/ozPkjVNrXH4",
+      "difficulty": "intermediate",
+      "muscle_groups": ["hamstrings", "lower back", "glutes"]
+    },
+    {
+      "name": "reverse fly",
+      "variations": ["dumbbell reverse fly", "cable reverse fly", "bent over reverse fly", "incline reverse fly", "machine reverse fly"],
+      "video_url": "https://www.youtube.com/watch?v=JoCRRZ3zRtI",
+      "short_url": "https://youtube.com/shorts/65RwYn0JKv8",
+      "difficulty": "beginner",
+      "muscle_groups": ["rear delts", "upper back"]
+    },
+    {
+      "name": "chest fly",
+      "variations": ["dumbbell chest fly", "cable chest fly", "machine chest fly", "incline chest fly", "decline chest fly"],
+      "video_url": "https://www.youtube.com/watch?v=eozdVDA78K0",
+      "short_url": "https://youtube.com/shorts/v6uVVQgDrMo",
+      "difficulty": "beginner",
+      "muscle_groups": ["chest", "shoulders"]
+    },
+    {
+      "name": "hack squat",
+      "variations": ["machine hack squat", "barbell hack squat", "narrow stance hack squat", "wide stance hack squat"],
+      "video_url": "https://www.youtube.com/watch?v=0tn5K9NlCfo",
+      "short_url": "https://youtube.com/shorts/EdtaG2rj-A4",
+      "difficulty": "intermediate",
+      "muscle_groups": ["quadriceps", "glutes", "hamstrings"]
+    },
+    {
+      "name": "adductor exercise",
+      "variations": ["adductor machine", "side lunge", "sumo squat", "copenhagen plank", "cable adduction"],
+      "video_url": "https://www.youtube.com/watch?v=TAj1sKuR-U0",
+      "short_url": "https://youtube.com/shorts/3KqTlC_6RYc",
+      "difficulty": "beginner",
+      "muscle_groups": ["adductors", "inner thigh"]
+    },
+    {
+      "name": "abductor exercise",
+      "variations": ["abductor machine", "lateral band walk", "fire hydrant", "side-lying leg raise", "clamshell"],
+      "video_url": "https://www.youtube.com/watch?v=ZNdGGEjfwDo",
+      "short_url": "https://youtube.com/shorts/Vx5J6aqemWo",
+      "difficulty": "beginner",
+      "muscle_groups": ["abductors", "outer thigh", "glutes"]
+    },
+    {
+      "name": "wrist curl",
+      "variations": ["barbell wrist curl", "dumbbell wrist curl", "reverse wrist curl", "behind the back wrist curl"],
+      "video_url": "https://www.youtube.com/watch?v=GmgKkKoMOHE",
+      "short_url": "https://youtube.com/shorts/8Rek4wgLlxs",
+      "difficulty": "beginner",
+      "muscle_groups": ["forearms", "wrist flexors"]
+    },
+    {
+      "name": "farmer's walk",
+      "variations": ["dumbbell farmer's walk", "trap bar farmer's walk", "kettlebell farmer's walk", "single arm farmer's walk"],
+      "video_url": "https://www.youtube.com/watch?v=Fkzk_RqlYig",
+      "short_url": "https://youtube.com/shorts/y70jAltkA0c",
+      "difficulty": "beginner",
+      "muscle_groups": ["forearms", "traps", "core", "full body"]
+    },
+    {
+      "name": "power clean",
+      "variations": ["hang clean", "clean and jerk", "dumbbell clean", "kettlebell clean", "muscle clean"],
+      "video_url": "https://www.youtube.com/watch?v=_LpPuYtFru8",
+      "short_url": "https://youtube.com/shorts/_QdYMfWU9Vw",
+      "difficulty": "advanced",
+      "muscle_groups": ["full body", "shoulders", "traps", "glutes", "quadriceps"]
+    },
+    {
+      "name": "snatch",
+      "variations": ["power snatch", "hang snatch", "dumbbell snatch", "kettlebell snatch", "muscle snatch"],
+      "video_url": "https://www.youtube.com/watch?v=9xQp2sldyts",
+      "short_url": "https://youtube.com/shorts/6FpPHdOBVRo",
+      "difficulty": "advanced",
+      "muscle_groups": ["full body", "shoulders", "traps", "glutes", "quadriceps"]
+    },
+    {
+      "name": "hip abduction",
+      "variations": ["machine hip abduction", "banded hip abduction", "standing hip abduction", "side-lying hip abduction"],
+      "video_url": "https://www.youtube.com/watch?v=ZNdGGEjfwDo",
+      "short_url": "https://youtube.com/shorts/Vx5J6aqemWo",
+      "difficulty": "beginner",
+      "muscle_groups": ["glutes", "hip abductors"]
+    },
+    {
+      "name": "kettlebell swing",
+      "variations": ["russian kettlebell swing", "american kettlebell swing", "single arm kettlebell swing", "double kettlebell swing"],
+      "video_url": "https://www.youtube.com/watch?v=YSxHifyI6s8",
+      "short_url": "https://youtube.com/shorts/yHksRj8rX5Q",
+      "difficulty": "intermediate",
+      "muscle_groups": ["glutes", "hamstrings", "lower back", "shoulders"]
+    },
+    {
+      "name": "battle ropes",
+      "variations": ["double wave", "alternating wave", "slam", "side-to-side", "circles"],
+      "video_url": "https://www.youtube.com/watch?v=r2Rzaf7SaGg",
+      "short_url": "https://youtube.com/shorts/8yQVvq6EJXM",
+      "difficulty": "intermediate",
+      "muscle_groups": ["shoulders", "arms", "core", "cardio"]
+    },
+    {
+      "name": "box jump",
+      "variations": ["standard box jump", "depth jump", "lateral box jump", "single leg box jump", "box jump over"],
+      "video_url": "https://www.youtube.com/watch?v=52r_Ul5k03g",
+      "short_url": "https://youtube.com/shorts/2SiqtRe1U40",
+      "difficulty": "intermediate",
+      "muscle_groups": ["quadriceps", "glutes", "calves"]
+    },
+    {
+      "name": "step-up",
+      "variations": ["weighted step-up", "alternating step-up", "lateral step-up", "crossover step-up", "box step-up"],
+      "video_url": "https://www.youtube.com/watch?v=5qjK_TJ_h6c",
+      "short_url": "https://youtube.com/shorts/MoJfzh0Iee4",
+      "difficulty": "beginner",
+      "muscle_groups": ["quadriceps", "glutes", "hamstrings"]
+    },
+    {
+      "name": "hip thrust",
+      "variations": ["barbell hip thrust", "single leg hip thrust", "banded hip thrust", "elevated hip thrust", "smith machine hip thrust"],
+      "video_url": "https://www.youtube.com/watch?v=LM8XHLYJoYs",
+      "short_url": "https://youtube.com/shorts/LM3Tg2DgDRU",
+      "difficulty": "beginner",
+      "muscle_groups": ["glutes", "hamstrings"]
+    },
+    {
+      "name": "ab wheel rollout",
+      "variations": ["kneeling ab wheel rollout", "standing ab wheel rollout", "barbell rollout", "stability ball rollout"],
+      "video_url": "https://www.youtube.com/watch?v=rqiTPdK1c_I",
+      "short_url": "https://youtube.com/shorts/kLSNPiEKMGY",
+      "difficulty": "intermediate",
+      "muscle_groups": ["core", "shoulders", "lats"]
+    },
+    {
+      "name": "hyperextension",
+      "variations": ["45 degree hyperextension", "reverse hyperextension", "weighted hyperextension", "stability ball hyperextension"],
+      "video_url": "https://www.youtube.com/watch?v=ph3pddpKzzw",
+      "short_url": "https://youtube.com/shorts/1XQQlDLSMEg",
+      "difficulty": "beginner",
+      "muscle_groups": ["lower back", "glutes", "hamstrings"]
+    },
+    {
+      "name": "machine chest press",
+      "variations": ["seated chest press", "incline chest press machine", "decline chest press machine", "hammer strength chest press"],
+      "video_url": "https://www.youtube.com/watch?v=xUm0BiZCWlQ",
+      "short_url": "https://youtube.com/shorts/RP0iJzuZGhc",
+      "difficulty": "beginner",
+      "muscle_groups": ["chest", "triceps", "shoulders"]
+    },
+    {
+      "name": "machine shoulder press",
+      "variations": ["seated shoulder press machine", "hammer strength shoulder press", "convergent shoulder press"],
+      "video_url": "https://www.youtube.com/watch?v=Wqq43dKW1TU",
+      "short_url": "https://youtube.com/shorts/XQGqh8_B8vI",
+      "difficulty": "beginner",
+      "muscle_groups": ["shoulders", "triceps"]
+    },
+    {
+      "name": "machine row",
+      "variations": ["seated row machine", "hammer strength row", "chest supported row machine", "t-bar row machine"],
+      "video_url": "https://www.youtube.com/watch?v=OZpXJ5VuHLY",
+      "short_url": "https://youtube.com/shorts/kxY2PLp1Zio",
+      "difficulty": "beginner",
+      "muscle_groups": ["back", "biceps", "rear delts"]
+    },
+    {
+      "name": "cable crossover",
+      "variations": ["high cable crossover", "low cable crossover", "middle cable crossover", "kneeling cable crossover"],
+      "video_url": "https://www.youtube.com/watch?v=taI4XduLpTk",
+      "short_url": "https://youtube.com/shorts/C6xmvlzm6hk",
+      "difficulty": "intermediate",
+      "muscle_groups": ["chest", "shoulders"]
+    },
+    {
+      "name": "cable row",
+      "variations": ["seated cable row", "standing cable row", "single arm cable row", "rope cable row", "wide grip cable row"],
+      "video_url": "https://www.youtube.com/watch?v=GZbfZ033f74",
+      "short_url": "https://youtube.com/shorts/SulaQaxlUFM",
+      "difficulty": "beginner",
+      "muscle_groups": ["back", "biceps", "rear delts"]
+    },
+    {
+      "name": "cable curl",
+      "variations": ["standing cable curl", "rope cable curl", "single arm cable curl", "high cable curl", "cable concentration curl"],
+      "video_url": "https://www.youtube.com/watch?v=340cDlMP3uE",
+      "short_url": "https://youtube.com/shorts/WCwOBhXmfKI",
+      "difficulty": "beginner",
+      "muscle_groups": ["biceps", "forearms"]
+    },
+    {
+      "name": "cable tricep pushdown",
+      "variations": ["rope pushdown", "v-bar pushdown", "straight bar pushdown", "single arm pushdown", "overhead cable tricep extension"],
+      "video_url": "https://www.youtube.com/watch?v=2-LAMcpzODU",
+      "short_url": "https://youtube.com/shorts/EHx5qk4CmQI",
+      "difficulty": "beginner",
+      "muscle_groups": ["triceps"]
+    },
+    {
+      "name": "incline bench press",
+      "variations": ["barbell incline press", "dumbbell incline press", "smith machine incline press", "close grip incline press"],
+      "video_url": "https://www.youtube.com/watch?v=SrqOu55lrYU",
+      "short_url": "https://youtube.com/shorts/QsYre__-aro",
+      "difficulty": "intermediate",
+      "muscle_groups": ["upper chest", "shoulders", "triceps"]
+    },
+    {
+      "name": "decline bench press",
+      "variations": ["barbell decline press", "dumbbell decline press", "smith machine decline press", "close grip decline press"],
+      "video_url": "https://www.youtube.com/watch?v=LfyQBUKR8SE",
+      "short_url": "https://youtube.com/shorts/gF6-Xd7cWZs",
+      "difficulty": "intermediate",
+      "muscle_groups": ["lower chest", "triceps"]
+    },
+    {
+      "name": "deficit deadlift",
+      "variations": ["barbell deficit deadlift", "snatch grip deficit deadlift", "sumo deficit deadlift", "trap bar deficit deadlift"],
+      "video_url": "https://www.youtube.com/watch?v=OMPuMKX3Kdg",
+      "short_url": "https://youtube.com/shorts/3BJ_fEwvtXE",
+      "difficulty": "advanced",
+      "muscle_groups": ["hamstrings", "back", "glutes"]
+    },
+    {
+      "name": "rack pull",
+      "variations": ["above knee rack pull", "below knee rack pull", "block pull", "partial deadlift"],
+      "video_url": "https://www.youtube.com/watch?v=e11lVmLsvFU",
+      "short_url": "https://youtube.com/shorts/wTFihnMwFQI",
+      "difficulty": "intermediate",
+      "muscle_groups": ["back", "traps", "glutes"]
     }
   ]
 }
