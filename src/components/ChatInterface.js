@@ -20,6 +20,9 @@ import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import React, { useState } from "react";
+import { MessageCircle, Send, Dumbbell, Apple, Calendar, Youtube } from "lucide-react";
+import VideoLinks from "./VideoLinks";
 
 const ChatInterface = () => {
   const navigate = useNavigate();
@@ -41,6 +44,7 @@ const ChatInterface = () => {
   // New state for video functionality
   const [videoUrl, setVideoUrl] = useState(null);
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+  const [videoLinks, setVideoLinks] = useState([]);
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -71,7 +75,10 @@ const ChatInterface = () => {
       let partialMessage = '';
       let firstChunkReceived = false;
       const botMessageId = (Date.now() + 1).toString();
-  
+      let collectingVideoLinks = false;
+      let videoLinksData = "";
+
+      // Function to process each chunk of the stream
       const processChunk = (chunk) => {
         const lines = chunk.split('\n\n');
         for (const line of lines) {
@@ -111,6 +118,55 @@ const ChatInterface = () => {
                 ];
               }
             });
+            
+            // Handle video links special messages
+            if (data === 'VIDEO_LINKS_START') {
+              collectingVideoLinks = true;
+              videoLinksData = "";
+              continue;
+            }
+            
+            if (data === 'VIDEO_LINKS_END') {
+              collectingVideoLinks = false;
+              try {
+                const parsedLinks = JSON.parse(videoLinksData);
+                setVideoLinks(parsedLinks);
+              } catch (e) {
+                console.error('Error parsing video links:', e);
+              }
+              continue;
+            }
+            
+            if (collectingVideoLinks) {
+              videoLinksData += data;
+              continue;
+            }
+            
+            // Handle normal message content
+            partialMessage += data + " ";
+            
+            // Update the last bot message with the new content
+            setMessages((prev) => {
+              const updatedMessages = [...prev];
+              const lastMessageIndex = updatedMessages.findIndex(msg => msg.type === "bot" && msg.partial);
+              
+              if (lastMessageIndex !== -1) {
+                // Update existing partial message
+                updatedMessages[lastMessageIndex] = {
+                  ...updatedMessages[lastMessageIndex],
+                  content: partialMessage.trim(),
+                };
+              } else {
+                // Add new bot message
+                updatedMessages.push({
+                  type: "bot",
+                  content: partialMessage.trim(),
+                  partial: true,
+                });
+              }
+              
+              return updatedMessages;
+            });
   
             if (!firstChunkReceived) {
               setLoading(false);
@@ -122,7 +178,17 @@ const ChatInterface = () => {
   
       const readChunk = async () => {
         const { done, value } = await reader.read();
-        if (done) return;
+
+        if (done) {
+          // Stream finished, add any remaining partial message and mark as complete
+          setMessages((prev) => {
+            return prev.map(msg => 
+              msg.partial ? { ...msg, partial: false } : msg
+            );
+          });
+          return;
+        }
+
         const chunk = decoder.decode(value);
         processChunk(chunk);
         readChunk();
@@ -277,24 +343,24 @@ const ChatInterface = () => {
   
 
         {/* Quick Actions */}
-        <div className="flex gap-2 p-4">
+        <div className="flex gap-2 p-4 overflow-x-auto">
           <button
             onClick={() => handleQuickAction("workout")}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors whitespace-nowrap"
           >
             <Dumbbell className="w-4 h-4" />
             Workout Plan
           </button>
           <button
             onClick={() => handleQuickAction("meal")}
-            className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors whitespace-nowrap"
           >
             <Apple className="w-4 h-4" />
             Meal Plan
           </button>
           <button
             onClick={() => handleQuickAction("equipment")}
-            className="flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors whitespace-nowrap"
           >
             <Calendar className="w-4 h-4" />
             Equipment Guide
@@ -334,10 +400,19 @@ const ChatInterface = () => {
 
         {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {messages.map((message) => (
-            <div key={message.id} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className="max-w-[70%]">
-                <div className={`p-3 rounded-lg ${message.type === 'user' ? 'bg-blue-500 text-white rounded-br-none' : 'bg-gray-100 text-gray-800 rounded-bl-none'}`}>
+          {messages.map((message, index) => (
+            <div
+              key={message.id}
+              className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              <div className="max-w-[80%]">
+                <div
+                  className={`p-3 rounded-lg ${
+                    message.type === 'user'
+                      ? 'bg-blue-500 text-white rounded-br-none'
+                      : 'bg-gray-100 text-gray-800 rounded-bl-none'
+                  }`}
+                >
                   {message.type === 'bot' ? (
                     <>
                       {formatContent(message.content)}
@@ -349,7 +424,7 @@ const ChatInterface = () => {
                     </>
                   ) : message.content}
                 </div>
-                {message.type === 'bot' && (
+                {message.type === 'bot' && message.id !== '1' && (
                   <div className="flex items-center gap-2 mt-2">
                     <button onClick={() => handleRating(message.id, 'up')} className={`p-1 rounded hover:bg-gray-100 ${message.rating === 'up' ? 'text-green-500' : 'text-gray-500'}`}>
                       <ThumbsUp className="w-4 h-4" />
@@ -368,12 +443,21 @@ const ChatInterface = () => {
                     )}
                   </div>
                 )}
+                {message.type === "bot" && message.id !== '1' && videoLinks.length > 0 && index === messages.length - 1 && (
+                  <VideoLinks videoLinks={videoLinks} />
+                )}
               </div>
             </div>
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">. . .</div>
+              <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "600ms" }}></div>
+                </div>
+              </div>
             </div>
           )}
         </div>
