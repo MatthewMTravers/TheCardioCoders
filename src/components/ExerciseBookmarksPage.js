@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Bookmark, Search, Filter, X, ChevronDown, ChevronUp, Plus } from 'lucide-react';
+import { Bookmark, Search, Filter, X, ChevronDown, ChevronUp, Plus, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import initialExercisesData from './Bookmarks.json';
 
 const ExerciseBookmarksPage = () => {
-  const [exercises, setExercises] = useState(() => {
-    // Load from localStorage or use initial data
-    const savedExercises = localStorage.getItem('fitnessExercises');
-    return savedExercises 
-      ? JSON.parse(savedExercises) 
-      : initialExercisesData.exercises;
-  });
+  const navigate = useNavigate();
+
+  const [exercises, setExercises] = useState(initialExercisesData.exercises);
   
   const [searchTerm, setSearchTerm] = useState('');
   const [filters, setFilters] = useState({
@@ -20,9 +17,25 @@ const ExerciseBookmarksPage = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedExercise, setSelectedExercise] = useState(null);
 
-  // Persist exercises to localStorage whenever they change
+  // Update Bookmarks.json whenever exercises change
   useEffect(() => {
-    localStorage.setItem('fitnessExercises', JSON.stringify(exercises));
+    const updateBookmarksJson = async () => {
+      try {
+        // This is a placeholder. In a real React app, you'd use a backend API
+        // to update the JSON file. For client-side, this won't actually work.
+        await fetch('/update-bookmarks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ exercises })
+        });
+      } catch (error) {
+        console.error('Failed to update Bookmarks.json', error);
+      }
+    };
+
+    updateBookmarksJson();
   }, [exercises]);
 
   const categories = ['Strength', 'Cardio', 'Flexibility', 'Balance'];
@@ -85,14 +98,26 @@ const ExerciseBookmarksPage = () => {
     setExercises(prev => prev.filter(exercise => exercise.id !== id));
   };
 
+  const handleBackToChat = () => {
+    navigate('/chat');
+  };
+
   return (
     <div className="max-w-4xl mx-auto p-4">
       <div className="bg-white rounded-lg shadow-lg">
         <div className="p-6 border-b flex justify-between items-center">
-          <h1 className="text-2xl font-bold flex items-center gap-2">
-            <Bookmark className="w-6 h-6 text-blue-500" />
-            Exercise Library
-          </h1>
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={handleBackToChat}
+              className="hover:bg-gray-100 p-2 rounded-full"
+            >
+              <ArrowLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <h1 className="text-2xl font-bold flex items-center gap-2">
+              <Bookmark className="w-6 h-6 text-blue-500" />
+              Exercise Library
+            </h1>
+          </div>
           <button
             onClick={handleAddExercise}
             className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
@@ -163,40 +188,46 @@ const ExerciseBookmarksPage = () => {
           </div>
 
           {/* Exercises List */}
-          <div className="grid md:grid-cols-2 gap-4">
-            {filteredExercises.map(exercise => (
-              <div 
-                key={exercise.id} 
-                className="border rounded-lg p-4 hover:shadow-md transition-shadow"
-              >
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-lg font-semibold">{exercise.name}</h3>
-                    <div className="text-sm text-gray-600 mt-1">
-                      {exercise.category} | {exercise.difficulty}
+          {exercises.length === 0 ? (
+            <div className="text-center text-gray-500 py-8">
+              No exercises added yet. Click "Add Exercise" to get started!
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-4">
+              {filteredExercises.map(exercise => (
+                <div 
+                  key={exercise.id} 
+                  className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-lg font-semibold">{exercise.name}</h3>
+                      <div className="text-sm text-gray-600 mt-1">
+                        {exercise.category} | {exercise.difficulty}
+                      </div>
+                      <div className="text-sm text-gray-500 mt-2">
+                        Muscles: {exercise.targetMuscles.join(', ')}
+                      </div>
                     </div>
-                    <div className="text-sm text-gray-500 mt-2">
-                      Muscles: {exercise.targetMuscles.join(', ')}
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setSelectedExercise(exercise)}
+                        className="text-blue-500 hover:bg-blue-50 p-2 rounded"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDeleteExercise(exercise.id)}
+                        className="text-red-500 hover:bg-red-50 p-2 rounded"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
                     </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => setSelectedExercise(exercise)}
-                      className="text-blue-500 hover:bg-blue-50 p-2 rounded"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleDeleteExercise(exercise.id)}
-                      className="text-red-500 hover:bg-red-50 p-2 rounded"
-                    >
-                      <X className="w-5 h-5" />
-                    </button>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

@@ -13,6 +13,8 @@ import {
   Download,
   Trash2,
   Eye,
+  Video,
+  PlayCircle,
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
@@ -36,37 +38,53 @@ const ChatInterface = () => {
   const [showSavedExercises, setShowSavedExercises] = useState(false);
   const [expandedExercises, setExpandedExercises] = useState({});
   
+  // New state for video functionality
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+
   const handleSend = () => {
     if (!input.trim()) return;
     sendMessage(input.trim());
     setInput('');
   };
-
-  const sendMessage = async (userMessage) => {
+  
+  const sendMessage = async (userMessage, isRegeneration = false) => {
     setLoading(true);
-    const newUserMessage = {
-      id: Date.now().toString(),
-      type: 'user',
-      content: userMessage,
-    };
-    setMessages((prev) => [...prev, newUserMessage]);
-
+    setVideoUrl(null);
+    setShowVideoPlayer(false);
+  
+    if (!isRegeneration) {
+      const newUserMessage = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: userMessage,
+      };
+      setMessages((prev) => [...prev, newUserMessage]);
+    }
+  
     try {
       const response = await fetch(`http://127.0.0.1:5000/chat/stream?message=${userMessage}`);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
+  
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let partialMessage = '';
       let firstChunkReceived = false;
       const botMessageId = (Date.now() + 1).toString();
-
+  
       const processChunk = (chunk) => {
         const lines = chunk.split('\n\n');
         for (const line of lines) {
           if (line.startsWith('data: ')) {
             let data = line.substring(6);
-
+  
+            // Video URL detection
+            const videoMatch = data.match(/(https?:\/\/\S+\.(?:mp4|avi|mov|webm)|youtube\.com\/watch\?v=[\w-]+|youtu\.be\/[\w-]+)/);
+            if (videoMatch) {
+              setVideoUrl(videoMatch[1]);
+              setShowVideoPlayer(true);
+            }
+  
             // Markdown formatting
             if (
               data.match(/^#{1,6}\s/) ||
@@ -79,9 +97,9 @@ const ChatInterface = () => {
             } else if (data.trim().length > 0 && !partialMessage.endsWith('\n')) {
               data = ' ' + data;
             }
-
+  
             partialMessage += data;
-
+  
             setMessages((prev) => {
               const lastMessage = prev[prev.length - 1];
               if (lastMessage?.type === 'bot') {
@@ -93,7 +111,7 @@ const ChatInterface = () => {
                 ];
               }
             });
-
+  
             if (!firstChunkReceived) {
               setLoading(false);
               firstChunkReceived = true;
@@ -101,32 +119,67 @@ const ChatInterface = () => {
           }
         }
       };
-
+  
       const readChunk = async () => {
         const { done, value } = await reader.read();
         if (done) return;
-
         const chunk = decoder.decode(value);
         processChunk(chunk);
         readChunk();
       };
-
+  
       readChunk();
     } catch (err) {
       console.error('Error sending message:', err);
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: Date.now().toString(),
-          type: 'bot',
-          content: "Sorry, I couldn't process that request.",
-          rating: null,
-        },
-      ]);
+  
+      const isVideoAction = userMessage.toLowerCase().includes('video');
+      if (isVideoAction) {
+        const fallbackVideoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+        setVideoUrl(fallbackVideoUrl);
+        setShowVideoPlayer(true);
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now().toString(),
+            type: 'bot',
+            content: "I couldn't process the request fully, but here's a sample video.",
+            rating: null,
+          },
+        ]);
+      } else {
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: Date.now().toString(),
+            type: 'bot',
+            content: "Sorry, I couldn't process that request.",
+            rating: null,
+          },
+        ]);
+      }
+  
       setLoading(false);
     }
   };
-
+  
+  const handleRegenerate = () => {
+    const reversedMessages = [...messages].reverse();
+    const lastBotMessage = reversedMessages.find((msg) => msg.type === 'bot' && msg.id !== '1');
+  
+    if (lastBotMessage) {
+      const precedingUserMessage = reversedMessages.find((msg, index, arr) =>
+        msg.type === 'user' &&
+        arr.slice(0, index).find((m) => m.type === 'bot')?.id === lastBotMessage.id
+      );
+  
+      setMessages((prev) => prev.filter((msg) => msg.id !== lastBotMessage.id));
+  
+      if (precedingUserMessage) {
+        sendMessage(precedingUserMessage.content, true);
+      }
+    }
+  };
+  
   const saveExercise = (content) => {
     setSavedExercises((prev) => [...prev, content]);
   };
@@ -148,11 +201,6 @@ const ChatInterface = () => {
           : msg
       )
     );
-  };
-
-  const handleRegenerate = (messageId) => {
-    const msg = messages.find((m) => m.id === messageId);
-    if (msg) sendMessage(msg.content);
   };
 
   const downloadExercisesPDF = () => {
@@ -187,9 +235,15 @@ const ChatInterface = () => {
       workout: 'I need a workout plan',
       meal: 'Help me create a meal plan',
       equipment: 'Guide me through gym equipment',
+      video: 'Show me a fitness demonstration video'
     };
     sendMessage(quickActions[action]);
     setInput('');
+  };
+
+  const isLastBotMessage = (messageId) => {
+    const botMessages = messages.filter(msg => msg.type === 'bot' && msg.id !== '1');
+    return botMessages.length > 0 && botMessages[botMessages.length - 1].id === messageId;
   };
 
   return (
@@ -201,14 +255,26 @@ const ChatInterface = () => {
             <MessageCircle className="w-6 h-6 text-blue-500" />
             <h1 className="text-xl font-bold ml-2">Fitness Assistant</h1>
           </div>
-          <button
-            onClick={() => navigate('/bookmarks')}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200"
-          >
-            <Bookmark className="w-5 h-5" />
-            My Bookmarks
-          </button>
+          <div className="flex items-center gap-2">
+            {videoUrl && (
+              <button
+                onClick={() => setShowVideoPlayer(!showVideoPlayer)}
+                className="flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200"
+              >
+                <Video className="w-5 h-5" />
+                {showVideoPlayer ? "Hide Video" : "Show Video"}
+              </button>
+            )}
+            <button
+              onClick={() => navigate('/bookmarks')}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200"
+            >
+              <Bookmark className="w-5 h-5" />
+              My Bookmarks
+            </button>
+          </div>
         </div>
+  
 
         {/* Quick Actions */}
         <div className="flex gap-2 p-4">
@@ -233,7 +299,38 @@ const ChatInterface = () => {
             <Calendar className="w-4 h-4" />
             Equipment Guide
           </button>
+          <button
+            onClick={() => handleQuickAction("video")}
+            className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 transition-colors"
+          >
+            <PlayCircle className="w-4 h-4" />
+            Fitness Video
+          </button>
         </div>
+
+        {/* Video Player */}
+        {videoUrl && showVideoPlayer && (
+          <div className="p-4 border-b bg-gray-50">
+            <div className="w-full aspect-video">
+              {videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be') ? (
+                <iframe 
+                  src={videoUrl.replace('watch?v=', 'embed/').split('&')[0]}
+                  title="YouTube Video"
+                  className="w-full h-full"
+                  allowFullScreen
+                />
+              ) : (
+                <video 
+                  controls 
+                  className="w-full h-full"
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Chat Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -260,15 +357,25 @@ const ChatInterface = () => {
                     <button onClick={() => handleRating(message.id, 'down')} className={`p-1 rounded hover:bg-gray-100 ${message.rating === 'down' ? 'text-red-500' : 'text-gray-500'}`}>
                       <ThumbsDown className="w-4 h-4" />
                     </button>
-                    <button onClick={() => handleRegenerate(message.id)} disabled={loading} className="p-1 rounded hover:bg-gray-100 text-gray-500">
-                      <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-                    </button>
+                    {isLastBotMessage(message.id) && (
+                      <button
+                        onClick={() => handleRegenerate(message.id)}
+                        disabled={loading}
+                        className="p-1 rounded hover:bg-gray-100 text-gray-500"
+                      >
+                        <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
             </div>
           ))}
-          {loading && <div className="flex justify-start"><div className="bg-gray-100 text-gray-800 p-3 rounded-lg">. . .</div></div>}
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">. . .</div>
+            </div>
+          )}
         </div>
 
         {/* Saved Exercises Toggle & Download */}
