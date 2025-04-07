@@ -20,8 +20,6 @@ import { useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import React, { useState } from "react";
-import { MessageCircle, Send, Dumbbell, Apple, Calendar, Youtube } from "lucide-react";
 import VideoLinks from "./VideoLinks";
 
 const ChatInterface = () => {

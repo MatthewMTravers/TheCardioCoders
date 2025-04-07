@@ -149,6 +149,8 @@ def generate(state: State):
     # Choose appropriate prompt format
     if "workout plan" in state["question"].lower() or "exercise routine" in state["question"].lower():
         prompt_text = workoutPlanPrompt.format(context=full_context, question=state["question"])
+    elif "video" in state["question"].lower() or "link" in state["question"].lower():
+        prompt_text = custom_rag_prompt.format(context=full_context, question=state["question"])
     else:
         prompt_text = conciseAnswerPrompt.format(context=full_context, question=state["question"])
 
