@@ -17,9 +17,9 @@ def handle_message():
     user_question = data.get("message", "")
 
     # Invoke state graph created in 'chatBot.py'
-    #response = graph.invoke({"question": user_question})
+    response = graph.invoke({"question": user_question})
     
-    #return jsonify({"answer": response["answer"]})
-    return jsonify({"answer": example_workout_plan})
+    return jsonify({"answer": response["answer"]})
+    #return jsonify({"answer": example_workout_plan})
 if __name__ == '__main__':
     app.run(debug=True)
