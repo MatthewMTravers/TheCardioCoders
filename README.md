@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Cardio coders is a smart fitness assistant that uses advanced AI technology to proivde context-aware excercise and fitness recommendations. By combining large language models and vector search, the application can understand and respond to fitness-related queries with precision.
+Cardio Coders is a smart fitness assistant that uses advanced AI technology to provide context-aware exercises and fitness recommendations. By combining large language models and vector search, the application can understand and respond to fitness-related queries with precision.
 
 ## Prerequisites:
 
@@ -47,7 +47,7 @@ Ensure you have the following installed before you begin:
 
 The application uses a sophisticated Retrieval-Augmented Generation (RAG) approach:
 
-- Loads Exercise documents from APIs
+- Loads Exercise documents from JSON files
 - Converts documents to vector embeddings
 - Uses vector search to find the most relevant information
 - Generates context-aware responses using a large language model
@@ -55,7 +55,7 @@ The application uses a sophisticated Retrieval-Augmented Generation (RAG) approa
 ## Troubleshooting:
 
 - Ensure all services(Backend, Ollama, Milvus) are running before starting the frontend
-- Check console for any error messages
+- Check the console for any error messages
 - Verify all dependencies are correctly installed
 
 # Development Resources
