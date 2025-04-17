@@ -1,0 +1,4204 @@
+{
+  "meals": [
+    {
+      "name": "Lentils with Tomato",
+      "ingredients": [
+        "Lentils",
+        "Tomato",
+        "Mushroom",
+        "Pepper",
+        "Garlic"
+      ],
+      "calories": 543,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Tomato with Potato",
+      "ingredients": [
+        "Tofu",
+        "Tomato",
+        "Spinach",
+        "Potato",
+        "Pepper"
+      ],
+      "calories": 613,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Broccoli",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Lettuce",
+        "Pepper",
+        "Greek Yogurt"
+      ],
+      "calories": 524,
+      "type": "keto-friendly",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Lettuce with Toast Bread",
+      "ingredients": [
+        "Chicken Breast",
+        "Lettuce",
+        "Zucchini",
+        "Toast Bread",
+        "Hummus"
+      ],
+      "calories": 475,
+      "type": "keto-friendly",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Bell Pepper",
+        "Hummus",
+        "Oregano"
+      ],
+      "calories": 601,
+      "type": "gluten-free",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Mushroom",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Tomato",
+        "Salt",
+        "Hummus"
+      ],
+      "calories": 597,
+      "type": "gluten-free",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Tomato with Oats",
+      "ingredients": [
+        "Salmon",
+        "Tomato",
+        "Cucumber",
+        "Oats",
+        "Greek Yogurt"
+      ],
+      "calories": 446,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Bell Pepper with Rice",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Broccoli",
+        "Rice",
+        "Olive Oil"
+      ],
+      "calories": 681,
+      "type": "vegetarian",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Spinach with Rice",
+      "ingredients": [
+        "Salmon",
+        "Spinach",
+        "Broccoli",
+        "Rice",
+        "Pasta"
+      ],
+      "calories": 448,
+      "type": "keto-friendly",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Lettuce",
+      "ingredients": [
+        "Egg",
+        "Lettuce",
+        "Carrot",
+        "Olive Oil",
+        "Mustard"
+      ],
+      "calories": 507,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Broccoli with Quinoa",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Cucumber",
+        "Quinoa",
+        "Hummus"
+      ],
+      "calories": 462,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Tomato",
+      "ingredients": [
+        "Bass",
+        "Tomato",
+        "Mushroom",
+        "Garlic",
+        "Hummus"
+      ],
+      "calories": 558,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Mushroom with Oats",
+      "ingredients": [
+        "Beef",
+        "Mushroom",
+        "Broccoli",
+        "Oats",
+        "Ginger"
+      ],
+      "calories": 363,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Cucumber with Toast Bread",
+      "ingredients": [
+        "Pork",
+        "Cucumber",
+        "Broccoli",
+        "Toast Bread",
+        "Quinoa"
+      ],
+      "calories": 603,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Mushroom",
+      "ingredients": [
+        "Tofu",
+        "Mushroom",
+        "Lettuce",
+        "Salt",
+        "Soy Sauce"
+      ],
+      "calories": 284,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Broccoli",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Spinach",
+        "Soy Sauce",
+        "Ketchup"
+      ],
+      "calories": 691,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Cucumber",
+      "ingredients": [
+        "Pork",
+        "Cucumber",
+        "Spinach",
+        "Basil",
+        "Paprika"
+      ],
+      "calories": 356,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Mushroom with Oats",
+      "ingredients": [
+        "Tuna",
+        "Mushroom",
+        "Broccoli",
+        "Paprika",
+        "Oats"
+      ],
+      "calories": 282,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Spinach with Quinoa",
+      "ingredients": [
+        "Pork",
+        "Spinach",
+        "Cucumber",
+        "Quinoa",
+        "Greek Yogurt"
+      ],
+      "calories": 318,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot with Oats",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Bell Pepper",
+        "Oats",
+        "Garlic"
+      ],
+      "calories": 673,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Tomato",
+      "ingredients": [
+        "Egg",
+        "Tomato",
+        "Cucumber",
+        "Pepper",
+        "Greek Yogurt"
+      ],
+      "calories": 469,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Tomato",
+      "ingredients": [
+        "Chicken Breast",
+        "Tomato",
+        "Spinach",
+        "Ginger",
+        "Paprika"
+      ],
+      "calories": 609,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Spinach",
+      "ingredients": [
+        "Lentils",
+        "Spinach",
+        "Carrot",
+        "Soy Sauce",
+        "Salt"
+      ],
+      "calories": 496,
+      "type": "high-protein",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Broccoli",
+      "ingredients": [
+        "Bass",
+        "Broccoli",
+        "Carrot",
+        "Olive Oil",
+        "Cilantro"
+      ],
+      "calories": 383,
+      "type": "vegan",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Spinach with Oats",
+      "ingredients": [
+        "Beef",
+        "Spinach",
+        "Lettuce",
+        "Oats",
+        "Toast Bread"
+      ],
+      "calories": 347,
+      "type": "gluten-free",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Broccoli with Oats",
+      "ingredients": [
+        "Turkey",
+        "Broccoli",
+        "Lettuce",
+        "Oats",
+        "Rice"
+      ],
+      "calories": 505,
+      "type": "keto-friendly",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Cucumber",
+      "ingredients": [
+        "Pork",
+        "Cucumber",
+        "Lettuce",
+        "Pepper",
+        "Ketchup"
+      ],
+      "calories": 474,
+      "type": "high-protein",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Broccoli with Toast Bread",
+      "ingredients": [
+        "Salmon",
+        "Broccoli",
+        "Mushroom",
+        "Ginger",
+        "Toast Bread"
+      ],
+      "calories": 382,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Tomato",
+      "ingredients": [
+        "Lentils",
+        "Tomato",
+        "Zucchini",
+        "Hummus",
+        "Mustard"
+      ],
+      "calories": 502,
+      "type": "keto-friendly",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Spinach",
+      "ingredients": [
+        "Lentils",
+        "Spinach",
+        "Mushroom",
+        "Olive Oil",
+        "Soy Sauce"
+      ],
+      "calories": 468,
+      "type": "high-protein",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Broccoli with Pasta",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Lettuce",
+        "Pasta",
+        "Garlic"
+      ],
+      "calories": 442,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Cucumber",
+      "ingredients": [
+        "Lentils",
+        "Cucumber",
+        "Spinach",
+        "Soy Sauce",
+        "Cilantro"
+      ],
+      "calories": 554,
+      "type": "balanced",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Cucumber",
+      "ingredients": [
+        "Beef",
+        "Cucumber",
+        "Broccoli",
+        "Hummus",
+        "Vinegar"
+      ],
+      "calories": 579,
+      "type": "vegetarian",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Tomato with Quinoa",
+      "ingredients": [
+        "Tuna",
+        "Tomato",
+        "Mushroom",
+        "Quinoa",
+        "Sweet Potato"
+      ],
+      "calories": 338,
+      "type": "vegetarian",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Cucumber with Sweet Potato",
+      "ingredients": [
+        "Pork",
+        "Cucumber",
+        "Spinach",
+        "Olive Oil",
+        "Sweet Potato"
+      ],
+      "calories": 473,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Lettuce",
+      "ingredients": [
+        "Turkey",
+        "Lettuce",
+        "Tomato",
+        "Soy Sauce",
+        "Basil"
+      ],
+      "calories": 412,
+      "type": "balanced",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Spinach with Rice",
+      "ingredients": [
+        "Turkey",
+        "Spinach",
+        "Cucumber",
+        "Rice",
+        "Ketchup"
+      ],
+      "calories": 637,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Broccoli",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Mushroom",
+        "Ketchup",
+        "Ginger"
+      ],
+      "calories": 441,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Zucchini",
+      "ingredients": [
+        "Salmon",
+        "Zucchini",
+        "Cucumber",
+        "Soy Sauce",
+        "Basil"
+      ],
+      "calories": 502,
+      "type": "keto-friendly",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Broccoli",
+      "ingredients": [
+        "Bass",
+        "Broccoli",
+        "Lettuce",
+        "Mayonnaise",
+        "Vinegar"
+      ],
+      "calories": 544,
+      "type": "low calorie",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Zucchini",
+      "ingredients": [
+        "Turkey",
+        "Zucchini",
+        "Carrot",
+        "Mustard",
+        "Hummus"
+      ],
+      "calories": 299,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Carrot with Quinoa",
+      "ingredients": [
+        "Salmon",
+        "Carrot",
+        "Lettuce",
+        "Quinoa",
+        "Ketchup"
+      ],
+      "calories": 560,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Broccoli with Oats",
+      "ingredients": [
+        "Tofu",
+        "Broccoli",
+        "Carrot",
+        "Oats",
+        "Ketchup"
+      ],
+      "calories": 666,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Tomato with Sweet Potato",
+      "ingredients": [
+        "Tofu",
+        "Tomato",
+        "Cucumber",
+        "Sweet Potato",
+        "Quinoa"
+      ],
+      "calories": 252,
+      "type": "high-protein",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Zucchini with Whole Wheat Wrap",
+      "ingredients": [
+        "Tuna",
+        "Zucchini",
+        "Broccoli",
+        "Oregano",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 591,
+      "type": "vegetarian",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tofu with Lettuce",
+      "ingredients": [
+        "Tofu",
+        "Lettuce",
+        "Tomato",
+        "Salt",
+        "Vinegar"
+      ],
+      "calories": 621,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Carrot",
+      "ingredients": [
+        "Tuna",
+        "Carrot",
+        "Mushroom",
+        "Ketchup",
+        "Garlic"
+      ],
+      "calories": 314,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Mushroom with Pasta",
+      "ingredients": [
+        "Salmon",
+        "Mushroom",
+        "Spinach",
+        "Soy Sauce",
+        "Pasta"
+      ],
+      "calories": 699,
+      "type": "keto-friendly",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Carrot",
+      "ingredients": [
+        "Chicken Breast",
+        "Carrot",
+        "Cucumber",
+        "Mayonnaise",
+        "Hummus"
+      ],
+      "calories": 588,
+      "type": "balanced",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Spinach with Quinoa",
+      "ingredients": [
+        "Pork",
+        "Spinach",
+        "Cucumber",
+        "Ketchup",
+        "Quinoa"
+      ],
+      "calories": 517,
+      "type": "high-protein",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Tomato with Sweet Potato",
+      "ingredients": [
+        "Lentils",
+        "Tomato",
+        "Lettuce",
+        "Sweet Potato",
+        "Cilantro"
+      ],
+      "calories": 498,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Lettuce with Quinoa",
+      "ingredients": [
+        "Turkey",
+        "Lettuce",
+        "Mushroom",
+        "Quinoa",
+        "Pasta"
+      ],
+      "calories": 414,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Bell Pepper",
+      "ingredients": [
+        "Lentils",
+        "Bell Pepper",
+        "Mushroom",
+        "Oregano",
+        "Pepper"
+      ],
+      "calories": 306,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Mushroom with Quinoa",
+      "ingredients": [
+        "Egg",
+        "Mushroom",
+        "Bell Pepper",
+        "Oregano",
+        "Quinoa"
+      ],
+      "calories": 661,
+      "type": "gluten-free",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Zucchini",
+      "ingredients": [
+        "Egg",
+        "Zucchini",
+        "Bell Pepper",
+        "Vinegar",
+        "Ketchup"
+      ],
+      "calories": 256,
+      "type": "vegan",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Cucumber with Pasta",
+      "ingredients": [
+        "Egg",
+        "Cucumber",
+        "Spinach",
+        "Pasta",
+        "Olive Oil"
+      ],
+      "calories": 436,
+      "type": "keto-friendly",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Tomato",
+      "ingredients": [
+        "Pork",
+        "Tomato",
+        "Mushroom",
+        "Ketchup",
+        "Vinegar"
+      ],
+      "calories": 555,
+      "type": "gluten-free",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Carrot",
+      "ingredients": [
+        "Salmon",
+        "Carrot",
+        "Bell Pepper",
+        "Soy Sauce",
+        "Oregano"
+      ],
+      "calories": 387,
+      "type": "high-protein",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Cucumber",
+        "Soy Sauce",
+        "Mustard"
+      ],
+      "calories": 335,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Zucchini with Whole Wheat Wrap",
+      "ingredients": [
+        "Pork",
+        "Zucchini",
+        "Bell Pepper",
+        "Mustard",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 404,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tofu with Lettuce with Potato",
+      "ingredients": [
+        "Tofu",
+        "Lettuce",
+        "Zucchini",
+        "Potato",
+        "Quinoa"
+      ],
+      "calories": 330,
+      "type": "vegan",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Broccoli",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Tomato",
+        "Ginger",
+        "Mustard"
+      ],
+      "calories": 250,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Broccoli",
+      "ingredients": [
+        "Salmon",
+        "Broccoli",
+        "Cucumber",
+        "Cilantro",
+        "Paprika"
+      ],
+      "calories": 558,
+      "type": "vegetarian",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Spinach",
+      "ingredients": [
+        "Beef",
+        "Spinach",
+        "Carrot",
+        "Vinegar",
+        "Mustard"
+      ],
+      "calories": 404,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Lettuce with Rice",
+      "ingredients": [
+        "Chicken Breast",
+        "Lettuce",
+        "Cucumber",
+        "Rice",
+        "Garlic"
+      ],
+      "calories": 472,
+      "type": "low calorie",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Lettuce",
+      "ingredients": [
+        "Tofu",
+        "Lettuce",
+        "Mushroom",
+        "Olive Oil",
+        "Cilantro"
+      ],
+      "calories": 528,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Bell Pepper",
+      "ingredients": [
+        "Egg",
+        "Bell Pepper",
+        "Tomato",
+        "Soy Sauce",
+        "Pepper"
+      ],
+      "calories": 316,
+      "type": "balanced",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Mushroom with Whole Wheat Wrap",
+      "ingredients": [
+        "Salmon",
+        "Mushroom",
+        "Bell Pepper",
+        "Vinegar",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 345,
+      "type": "low calorie",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Salmon with Bell Pepper with Potato",
+      "ingredients": [
+        "Salmon",
+        "Bell Pepper",
+        "Mushroom",
+        "Greek Yogurt",
+        "Potato"
+      ],
+      "calories": 526,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot with Pasta",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Bell Pepper",
+        "Pepper",
+        "Pasta"
+      ],
+      "calories": 421,
+      "type": "gluten-free",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Cucumber with Rice",
+      "ingredients": [
+        "Turkey",
+        "Cucumber",
+        "Carrot",
+        "Rice",
+        "Potato"
+      ],
+      "calories": 287,
+      "type": "balanced",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Bell Pepper",
+      "ingredients": [
+        "Chicken Breast",
+        "Bell Pepper",
+        "Mushroom",
+        "Soy Sauce",
+        "Paprika"
+      ],
+      "calories": 546,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Tomato with Rice",
+      "ingredients": [
+        "Lentils",
+        "Tomato",
+        "Lettuce",
+        "Rice",
+        "Pasta"
+      ],
+      "calories": 683,
+      "type": "vegan",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Tomato with Rice",
+      "ingredients": [
+        "Tuna",
+        "Tomato",
+        "Lettuce",
+        "Rice",
+        "Oregano"
+      ],
+      "calories": 279,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Lettuce",
+      "ingredients": [
+        "Turkey",
+        "Lettuce",
+        "Cucumber",
+        "Greek Yogurt",
+        "Paprika"
+      ],
+      "calories": 698,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Zucchini with Sweet Potato",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Spinach",
+        "Ketchup",
+        "Sweet Potato"
+      ],
+      "calories": 313,
+      "type": "balanced",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Mushroom with Oats",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Zucchini",
+        "Oats",
+        "Ketchup"
+      ],
+      "calories": 520,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Cucumber with Rice",
+      "ingredients": [
+        "Chicken Breast",
+        "Cucumber",
+        "Zucchini",
+        "Rice",
+        "Basil"
+      ],
+      "calories": 290,
+      "type": "high-protein",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Zucchini",
+      "ingredients": [
+        "Salmon",
+        "Zucchini",
+        "Mushroom",
+        "Greek Yogurt",
+        "Basil"
+      ],
+      "calories": 335,
+      "type": "high-protein",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Tomato",
+      "ingredients": [
+        "Egg",
+        "Tomato",
+        "Bell Pepper",
+        "Mustard",
+        "Basil"
+      ],
+      "calories": 626,
+      "type": "gluten-free",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Carrot with Pasta",
+      "ingredients": [
+        "Chicken Breast",
+        "Carrot",
+        "Broccoli",
+        "Pepper",
+        "Pasta"
+      ],
+      "calories": 351,
+      "type": "vegetarian",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Tomato with Oats",
+      "ingredients": [
+        "Tofu",
+        "Tomato",
+        "Spinach",
+        "Oats",
+        "Paprika"
+      ],
+      "calories": 500,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Cucumber with Oats",
+      "ingredients": [
+        "Chicken Breast",
+        "Cucumber",
+        "Spinach",
+        "Oats",
+        "Toast Bread"
+      ],
+      "calories": 696,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Carrot with Rice",
+      "ingredients": [
+        "Chicken Breast",
+        "Carrot",
+        "Cucumber",
+        "Soy Sauce",
+        "Rice"
+      ],
+      "calories": 553,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Cucumber with Sweet Potato",
+      "ingredients": [
+        "Bass",
+        "Cucumber",
+        "Broccoli",
+        "Sweet Potato",
+        "Potato"
+      ],
+      "calories": 399,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Spinach with Oats",
+      "ingredients": [
+        "Bass",
+        "Spinach",
+        "Broccoli",
+        "Vinegar",
+        "Oats"
+      ],
+      "calories": 453,
+      "type": "gluten-free",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Cucumber",
+      "ingredients": [
+        "Beef",
+        "Cucumber",
+        "Lettuce",
+        "Greek Yogurt",
+        "Hummus"
+      ],
+      "calories": 634,
+      "type": "high-protein",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Lettuce",
+      "ingredients": [
+        "Egg",
+        "Lettuce",
+        "Tomato",
+        "Hummus",
+        "Mustard"
+      ],
+      "calories": 333,
+      "type": "vegetarian",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Spinach",
+      "ingredients": [
+        "Tuna",
+        "Spinach",
+        "Carrot",
+        "Garlic",
+        "Ketchup"
+      ],
+      "calories": 669,
+      "type": "vegan",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Mushroom with Rice",
+      "ingredients": [
+        "Turkey",
+        "Mushroom",
+        "Carrot",
+        "Hummus",
+        "Rice"
+      ],
+      "calories": 291,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Zucchini with Pasta",
+      "ingredients": [
+        "Pork",
+        "Zucchini",
+        "Bell Pepper",
+        "Pasta",
+        "Oregano"
+      ],
+      "calories": 698,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Bell Pepper with Rice",
+      "ingredients": [
+        "Tuna",
+        "Bell Pepper",
+        "Cucumber",
+        "Garlic",
+        "Rice"
+      ],
+      "calories": 428,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Lettuce",
+      "ingredients": [
+        "Pork",
+        "Lettuce",
+        "Broccoli",
+        "Vinegar",
+        "Greek Yogurt"
+      ],
+      "calories": 349,
+      "type": "keto-friendly",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Tomato with Rice",
+      "ingredients": [
+        "Chicken Breast",
+        "Tomato",
+        "Zucchini",
+        "Paprika",
+        "Rice"
+      ],
+      "calories": 353,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Bell Pepper",
+        "Mayonnaise",
+        "Garlic"
+      ],
+      "calories": 585,
+      "type": "vegan",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Cucumber with Oats",
+      "ingredients": [
+        "Egg",
+        "Cucumber",
+        "Broccoli",
+        "Olive Oil",
+        "Oats"
+      ],
+      "calories": 477,
+      "type": "high-protein",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Cucumber",
+      "ingredients": [
+        "Chicken Breast",
+        "Cucumber",
+        "Spinach",
+        "Oregano",
+        "Ketchup"
+      ],
+      "calories": 511,
+      "type": "high-protein",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Lettuce",
+      "ingredients": [
+        "Pork",
+        "Lettuce",
+        "Mushroom",
+        "Oregano",
+        "Cilantro"
+      ],
+      "calories": 547,
+      "type": "low calorie",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Cucumber",
+      "ingredients": [
+        "Bass",
+        "Cucumber",
+        "Zucchini",
+        "Greek Yogurt",
+        "Salt"
+      ],
+      "calories": 474,
+      "type": "low calorie",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Broccoli with Pasta",
+      "ingredients": [
+        "Egg",
+        "Broccoli",
+        "Mushroom",
+        "Pepper",
+        "Pasta"
+      ],
+      "calories": 608,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot with Pasta",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Lettuce",
+        "Pasta",
+        "Vinegar"
+      ],
+      "calories": 438,
+      "type": "high-protein",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Bell Pepper",
+      "ingredients": [
+        "Lentils",
+        "Bell Pepper",
+        "Carrot",
+        "Soy Sauce",
+        "Salt"
+      ],
+      "calories": 442,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Broccoli with Pasta",
+      "ingredients": [
+        "Bass",
+        "Broccoli",
+        "Cucumber",
+        "Ginger",
+        "Pasta"
+      ],
+      "calories": 527,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Carrot",
+      "ingredients": [
+        "Pork",
+        "Carrot",
+        "Lettuce",
+        "Mayonnaise",
+        "Cilantro"
+      ],
+      "calories": 585,
+      "type": "vegetarian",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Bell Pepper with Pasta",
+      "ingredients": [
+        "Tuna",
+        "Bell Pepper",
+        "Mushroom",
+        "Oregano",
+        "Pasta"
+      ],
+      "calories": 518,
+      "type": "gluten-free",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Broccoli",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Lettuce",
+        "Garlic",
+        "Mustard"
+      ],
+      "calories": 528,
+      "type": "keto-friendly",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Mushroom with Potato",
+      "ingredients": [
+        "Lentils",
+        "Mushroom",
+        "Zucchini",
+        "Cilantro",
+        "Potato"
+      ],
+      "calories": 401,
+      "type": "low calorie",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Spinach with Rice",
+      "ingredients": [
+        "Egg",
+        "Spinach",
+        "Zucchini",
+        "Garlic",
+        "Rice"
+      ],
+      "calories": 272,
+      "type": "high-protein",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Spinach with Rice",
+      "ingredients": [
+        "Bass",
+        "Spinach",
+        "Bell Pepper",
+        "Basil",
+        "Rice"
+      ],
+      "calories": 450,
+      "type": "gluten-free",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Broccoli",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Bell Pepper",
+        "Ginger",
+        "Garlic"
+      ],
+      "calories": 336,
+      "type": "vegetarian",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Spinach",
+        "Basil",
+        "Ginger"
+      ],
+      "calories": 455,
+      "type": "low calorie",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Carrot",
+      "ingredients": [
+        "Bass",
+        "Carrot",
+        "Lettuce",
+        "Vinegar",
+        "Ginger"
+      ],
+      "calories": 255,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Spinach with Toast Bread",
+      "ingredients": [
+        "Chicken Breast",
+        "Spinach",
+        "Zucchini",
+        "Basil",
+        "Toast Bread"
+      ],
+      "calories": 349,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Tomato with Whole Wheat Wrap",
+      "ingredients": [
+        "Beef",
+        "Tomato",
+        "Spinach",
+        "Soy Sauce",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 648,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tuna with Spinach",
+      "ingredients": [
+        "Tuna",
+        "Spinach",
+        "Cucumber",
+        "Pepper",
+        "Garlic"
+      ],
+      "calories": 502,
+      "type": "vegan",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Zucchini with Whole Wheat Wrap",
+      "ingredients": [
+        "Chicken Breast",
+        "Zucchini",
+        "Spinach",
+        "Whole Wheat Wrap",
+        "Salt"
+      ],
+      "calories": 637,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Pork with Broccoli",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Spinach",
+        "Cilantro",
+        "Oregano"
+      ],
+      "calories": 469,
+      "type": "high-protein",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Broccoli with Pasta",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Cucumber",
+        "Hummus",
+        "Pasta"
+      ],
+      "calories": 601,
+      "type": "balanced",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Bell Pepper with Pasta",
+      "ingredients": [
+        "Egg",
+        "Bell Pepper",
+        "Cucumber",
+        "Greek Yogurt",
+        "Pasta"
+      ],
+      "calories": 381,
+      "type": "gluten-free",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Spinach",
+      "ingredients": [
+        "Lentils",
+        "Spinach",
+        "Carrot",
+        "Mayonnaise",
+        "Salt"
+      ],
+      "calories": 521,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Carrot with Pasta",
+      "ingredients": [
+        "Turkey",
+        "Carrot",
+        "Tomato",
+        "Basil",
+        "Pasta"
+      ],
+      "calories": 624,
+      "type": "vegan",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Lettuce",
+      "ingredients": [
+        "Bass",
+        "Lettuce",
+        "Tomato",
+        "Hummus",
+        "Oregano"
+      ],
+      "calories": 273,
+      "type": "balanced",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Broccoli with Whole Wheat Wrap",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Cucumber",
+        "Whole Wheat Wrap",
+        "Oats"
+      ],
+      "calories": 432,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tuna with Broccoli",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Zucchini",
+        "Basil",
+        "Garlic"
+      ],
+      "calories": 612,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Tomato with Toast Bread",
+      "ingredients": [
+        "Beef",
+        "Tomato",
+        "Bell Pepper",
+        "Cilantro",
+        "Toast Bread"
+      ],
+      "calories": 375,
+      "type": "gluten-free",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Cucumber",
+      "ingredients": [
+        "Chicken Breast",
+        "Cucumber",
+        "Spinach",
+        "Hummus",
+        "Soy Sauce"
+      ],
+      "calories": 625,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Broccoli",
+      "ingredients": [
+        "Turkey",
+        "Broccoli",
+        "Tomato",
+        "Pepper",
+        "Hummus"
+      ],
+      "calories": 530,
+      "type": "vegetarian",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Broccoli with Whole Wheat Wrap",
+      "ingredients": [
+        "Chicken Breast",
+        "Broccoli",
+        "Spinach",
+        "Hummus",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 316,
+      "type": "gluten-free",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Beef with Carrot with Quinoa",
+      "ingredients": [
+        "Beef",
+        "Carrot",
+        "Broccoli",
+        "Oregano",
+        "Quinoa"
+      ],
+      "calories": 257,
+      "type": "high-protein",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Tomato",
+      "ingredients": [
+        "Tuna",
+        "Tomato",
+        "Spinach",
+        "Vinegar",
+        "Greek Yogurt"
+      ],
+      "calories": 514,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Spinach with Potato",
+      "ingredients": [
+        "Egg",
+        "Spinach",
+        "Tomato",
+        "Potato",
+        "Ketchup"
+      ],
+      "calories": 324,
+      "type": "high-protein",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Carrot",
+      "ingredients": [
+        "Turkey",
+        "Carrot",
+        "Lettuce",
+        "Olive Oil",
+        "Ginger"
+      ],
+      "calories": 352,
+      "type": "vegetarian",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Zucchini with Pasta",
+      "ingredients": [
+        "Egg",
+        "Zucchini",
+        "Tomato",
+        "Ketchup",
+        "Pasta"
+      ],
+      "calories": 353,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Spinach",
+      "ingredients": [
+        "Turkey",
+        "Spinach",
+        "Lettuce",
+        "Garlic",
+        "Soy Sauce"
+      ],
+      "calories": 660,
+      "type": "vegan",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Tomato with Potato",
+      "ingredients": [
+        "Pork",
+        "Tomato",
+        "Zucchini",
+        "Potato",
+        "Mustard"
+      ],
+      "calories": 543,
+      "type": "keto-friendly",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Zucchini",
+        "Pepper",
+        "Mayonnaise"
+      ],
+      "calories": 454,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Cucumber",
+      "ingredients": [
+        "Beef",
+        "Cucumber",
+        "Bell Pepper",
+        "Hummus",
+        "Greek Yogurt"
+      ],
+      "calories": 336,
+      "type": "balanced",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Broccoli",
+      "ingredients": [
+        "Turkey",
+        "Broccoli",
+        "Tomato",
+        "Mayonnaise",
+        "Olive Oil"
+      ],
+      "calories": 696,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Cucumber with Toast Bread",
+      "ingredients": [
+        "Tofu",
+        "Cucumber",
+        "Broccoli",
+        "Toast Bread",
+        "Mayonnaise"
+      ],
+      "calories": 328,
+      "type": "keto-friendly",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Carrot",
+      "ingredients": [
+        "Lentils",
+        "Carrot",
+        "Mushroom",
+        "Ketchup",
+        "Basil"
+      ],
+      "calories": 367,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Cucumber",
+      "ingredients": [
+        "Turkey",
+        "Cucumber",
+        "Bell Pepper",
+        "Olive Oil",
+        "Greek Yogurt"
+      ],
+      "calories": 448,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Zucchini with Sweet Potato",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Tomato",
+        "Vinegar",
+        "Sweet Potato"
+      ],
+      "calories": 581,
+      "type": "high-protein",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Lettuce with Toast Bread",
+      "ingredients": [
+        "Tofu",
+        "Lettuce",
+        "Spinach",
+        "Toast Bread",
+        "Olive Oil"
+      ],
+      "calories": 380,
+      "type": "high-protein",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Tomato",
+      "ingredients": [
+        "Beef",
+        "Tomato",
+        "Broccoli",
+        "Cilantro",
+        "Ketchup"
+      ],
+      "calories": 435,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Bell Pepper with Pasta",
+      "ingredients": [
+        "Lentils",
+        "Bell Pepper",
+        "Mushroom",
+        "Pasta",
+        "Mayonnaise"
+      ],
+      "calories": 322,
+      "type": "balanced",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Carrot with Pasta",
+      "ingredients": [
+        "Beef",
+        "Carrot",
+        "Lettuce",
+        "Pasta",
+        "Basil"
+      ],
+      "calories": 651,
+      "type": "high-protein",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Cucumber with Rice",
+      "ingredients": [
+        "Tofu",
+        "Cucumber",
+        "Carrot",
+        "Rice",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 451,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Lentils with Mushroom",
+      "ingredients": [
+        "Lentils",
+        "Mushroom",
+        "Lettuce",
+        "Mayonnaise",
+        "Mustard"
+      ],
+      "calories": 476,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Mushroom with Potato",
+      "ingredients": [
+        "Turkey",
+        "Mushroom",
+        "Carrot",
+        "Greek Yogurt",
+        "Potato"
+      ],
+      "calories": 688,
+      "type": "vegetarian",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Carrot",
+      "ingredients": [
+        "Tofu",
+        "Carrot",
+        "Lettuce",
+        "Pepper",
+        "Hummus"
+      ],
+      "calories": 371,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Lettuce with Pasta",
+      "ingredients": [
+        "Tofu",
+        "Lettuce",
+        "Bell Pepper",
+        "Garlic",
+        "Pasta"
+      ],
+      "calories": 385,
+      "type": "vegan",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Zucchini",
+      "ingredients": [
+        "Pork",
+        "Zucchini",
+        "Spinach",
+        "Mayonnaise",
+        "Vinegar"
+      ],
+      "calories": 374,
+      "type": "low calorie",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Zucchini",
+      "ingredients": [
+        "Chicken Breast",
+        "Zucchini",
+        "Carrot",
+        "Olive Oil",
+        "Garlic"
+      ],
+      "calories": 695,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Spinach with Pasta",
+      "ingredients": [
+        "Salmon",
+        "Spinach",
+        "Bell Pepper",
+        "Vinegar",
+        "Pasta"
+      ],
+      "calories": 648,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Zucchini",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Spinach",
+        "Mayonnaise",
+        "Greek Yogurt"
+      ],
+      "calories": 664,
+      "type": "low calorie",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Carrot",
+      "ingredients": [
+        "Salmon",
+        "Carrot",
+        "Mushroom",
+        "Pepper",
+        "Hummus"
+      ],
+      "calories": 347,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Mushroom with Sweet Potato",
+      "ingredients": [
+        "Tofu",
+        "Mushroom",
+        "Zucchini",
+        "Sweet Potato",
+        "Garlic"
+      ],
+      "calories": 279,
+      "type": "keto-friendly",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Cucumber",
+      "ingredients": [
+        "Egg",
+        "Cucumber",
+        "Spinach",
+        "Paprika",
+        "Basil"
+      ],
+      "calories": 263,
+      "type": "gluten-free",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Cucumber with Quinoa",
+      "ingredients": [
+        "Beef",
+        "Cucumber",
+        "Bell Pepper",
+        "Quinoa",
+        "Ketchup"
+      ],
+      "calories": 387,
+      "type": "low calorie",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Broccoli with Oats",
+      "ingredients": [
+        "Beef",
+        "Broccoli",
+        "Mushroom",
+        "Oats",
+        "Garlic"
+      ],
+      "calories": 427,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Broccoli with Pasta",
+      "ingredients": [
+        "Beef",
+        "Broccoli",
+        "Spinach",
+        "Pasta",
+        "Basil"
+      ],
+      "calories": 653,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Bell Pepper with Potato",
+      "ingredients": [
+        "Turkey",
+        "Bell Pepper",
+        "Zucchini",
+        "Potato",
+        "Basil"
+      ],
+      "calories": 688,
+      "type": "vegan",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Spinach",
+      "ingredients": [
+        "Lentils",
+        "Spinach",
+        "Bell Pepper",
+        "Garlic",
+        "Mayonnaise"
+      ],
+      "calories": 651,
+      "type": "high-protein",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Mushroom with Quinoa",
+      "ingredients": [
+        "Lentils",
+        "Mushroom",
+        "Spinach",
+        "Quinoa",
+        "Ketchup"
+      ],
+      "calories": 447,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Broccoli with Toast Bread",
+      "ingredients": [
+        "Tofu",
+        "Broccoli",
+        "Spinach",
+        "Toast Bread",
+        "Oregano"
+      ],
+      "calories": 678,
+      "type": "balanced",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Spinach",
+      "ingredients": [
+        "Beef",
+        "Spinach",
+        "Mushroom",
+        "Basil",
+        "Cilantro"
+      ],
+      "calories": 333,
+      "type": "keto-friendly",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Cucumber with Whole Wheat Wrap",
+      "ingredients": [
+        "Tofu",
+        "Cucumber",
+        "Lettuce",
+        "Mustard",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 400,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Pork with Bell Pepper",
+      "ingredients": [
+        "Pork",
+        "Bell Pepper",
+        "Mushroom",
+        "Ginger",
+        "Vinegar"
+      ],
+      "calories": 522,
+      "type": "vegan",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Lettuce with Toast Bread",
+      "ingredients": [
+        "Tuna",
+        "Lettuce",
+        "Carrot",
+        "Toast Bread",
+        "Greek Yogurt"
+      ],
+      "calories": 497,
+      "type": "vegan",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Broccoli",
+        "Hummus",
+        "Salt"
+      ],
+      "calories": 451,
+      "type": "balanced",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Broccoli",
+      "ingredients": [
+        "Salmon",
+        "Broccoli",
+        "Tomato",
+        "Mayonnaise",
+        "Garlic"
+      ],
+      "calories": 697,
+      "type": "keto-friendly",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Broccoli with Pasta",
+      "ingredients": [
+        "Lentils",
+        "Broccoli",
+        "Tomato",
+        "Soy Sauce",
+        "Pasta"
+      ],
+      "calories": 312,
+      "type": "keto-friendly",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Spinach",
+      "ingredients": [
+        "Turkey",
+        "Spinach",
+        "Tomato",
+        "Garlic",
+        "Paprika"
+      ],
+      "calories": 393,
+      "type": "low calorie",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Spinach",
+      "ingredients": [
+        "Tofu",
+        "Spinach",
+        "Mushroom",
+        "Olive Oil",
+        "Garlic"
+      ],
+      "calories": 673,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Carrot",
+      "ingredients": [
+        "Egg",
+        "Carrot",
+        "Tomato",
+        "Ginger",
+        "Cilantro"
+      ],
+      "calories": 404,
+      "type": "gluten-free",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Mushroom",
+      "ingredients": [
+        "Beef",
+        "Mushroom",
+        "Carrot",
+        "Vinegar",
+        "Oregano"
+      ],
+      "calories": 586,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Lettuce with Quinoa",
+      "ingredients": [
+        "Beef",
+        "Lettuce",
+        "Tomato",
+        "Paprika",
+        "Quinoa"
+      ],
+      "calories": 537,
+      "type": "high-protein",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Lettuce with Quinoa",
+      "ingredients": [
+        "Lentils",
+        "Lettuce",
+        "Tomato",
+        "Quinoa",
+        "Mustard"
+      ],
+      "calories": 426,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Zucchini",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Carrot",
+        "Ginger",
+        "Garlic"
+      ],
+      "calories": 506,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Broccoli",
+      "ingredients": [
+        "Bass",
+        "Broccoli",
+        "Cucumber",
+        "Garlic",
+        "Mustard"
+      ],
+      "calories": 449,
+      "type": "high-protein",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Broccoli",
+      "ingredients": [
+        "Salmon",
+        "Broccoli",
+        "Tomato",
+        "Ketchup",
+        "Soy Sauce"
+      ],
+      "calories": 353,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Spinach",
+      "ingredients": [
+        "Beef",
+        "Spinach",
+        "Cucumber",
+        "Ketchup",
+        "Mayonnaise"
+      ],
+      "calories": 449,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Cucumber with Quinoa",
+      "ingredients": [
+        "Lentils",
+        "Cucumber",
+        "Broccoli",
+        "Quinoa",
+        "Mayonnaise"
+      ],
+      "calories": 533,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Bell Pepper with Quinoa",
+      "ingredients": [
+        "Lentils",
+        "Bell Pepper",
+        "Broccoli",
+        "Paprika",
+        "Quinoa"
+      ],
+      "calories": 411,
+      "type": "gluten-free",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Bell Pepper with Quinoa",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Broccoli",
+        "Quinoa",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 670,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Mushroom",
+        "Olive Oil",
+        "Salt"
+      ],
+      "calories": 697,
+      "type": "balanced",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Bell Pepper with Sweet Potato",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Mushroom",
+        "Sweet Potato",
+        "Pepper"
+      ],
+      "calories": 525,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Mushroom with Whole Wheat Wrap",
+      "ingredients": [
+        "Tofu",
+        "Mushroom",
+        "Broccoli",
+        "Ginger",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 379,
+      "type": "keto-friendly",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tuna with Spinach",
+      "ingredients": [
+        "Tuna",
+        "Spinach",
+        "Carrot",
+        "Soy Sauce",
+        "Salt"
+      ],
+      "calories": 627,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Carrot",
+      "ingredients": [
+        "Bass",
+        "Carrot",
+        "Broccoli",
+        "Pepper",
+        "Soy Sauce"
+      ],
+      "calories": 318,
+      "type": "gluten-free",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Zucchini with Rice",
+      "ingredients": [
+        "Tofu",
+        "Zucchini",
+        "Tomato",
+        "Soy Sauce",
+        "Rice"
+      ],
+      "calories": 464,
+      "type": "gluten-free",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Tomato with Rice",
+      "ingredients": [
+        "Egg",
+        "Tomato",
+        "Broccoli",
+        "Rice",
+        "Oregano"
+      ],
+      "calories": 294,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Broccoli",
+      "ingredients": [
+        "Turkey",
+        "Broccoli",
+        "Bell Pepper",
+        "Ginger",
+        "Ketchup"
+      ],
+      "calories": 563,
+      "type": "gluten-free",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Spinach",
+      "ingredients": [
+        "Tofu",
+        "Spinach",
+        "Tomato",
+        "Hummus",
+        "Olive Oil"
+      ],
+      "calories": 587,
+      "type": "keto-friendly",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Broccoli",
+      "ingredients": [
+        "Chicken Breast",
+        "Broccoli",
+        "Zucchini",
+        "Olive Oil",
+        "Mustard"
+      ],
+      "calories": 376,
+      "type": "balanced",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Lettuce with Quinoa",
+      "ingredients": [
+        "Tuna",
+        "Lettuce",
+        "Broccoli",
+        "Quinoa",
+        "Basil"
+      ],
+      "calories": 337,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Lettuce with Toast Bread",
+      "ingredients": [
+        "Salmon",
+        "Lettuce",
+        "Spinach",
+        "Paprika",
+        "Toast Bread"
+      ],
+      "calories": 375,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Bell Pepper with Pasta",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Zucchini",
+        "Ketchup",
+        "Pasta"
+      ],
+      "calories": 339,
+      "type": "high-protein",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Zucchini",
+      "ingredients": [
+        "Egg",
+        "Zucchini",
+        "Spinach",
+        "Cilantro",
+        "Vinegar"
+      ],
+      "calories": 650,
+      "type": "keto-friendly",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Tomato",
+      "ingredients": [
+        "Beef",
+        "Tomato",
+        "Zucchini",
+        "Olive Oil",
+        "Hummus"
+      ],
+      "calories": 502,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Broccoli with Whole Wheat Wrap",
+      "ingredients": [
+        "Beef",
+        "Broccoli",
+        "Carrot",
+        "Whole Wheat Wrap",
+        "Olive Oil"
+      ],
+      "calories": 469,
+      "type": "low calorie",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Beef with Bell Pepper",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Carrot",
+        "Olive Oil",
+        "Basil"
+      ],
+      "calories": 293,
+      "type": "low calorie",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Bell Pepper",
+      "ingredients": [
+        "Lentils",
+        "Bell Pepper",
+        "Broccoli",
+        "Pepper",
+        "Soy Sauce"
+      ],
+      "calories": 462,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Bell Pepper",
+      "ingredients": [
+        "Salmon",
+        "Bell Pepper",
+        "Mushroom",
+        "Salt",
+        "Cilantro"
+      ],
+      "calories": 542,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Lettuce with Quinoa",
+      "ingredients": [
+        "Pork",
+        "Lettuce",
+        "Mushroom",
+        "Quinoa",
+        "Oregano"
+      ],
+      "calories": 596,
+      "type": "vegetarian",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Cucumber with Potato",
+      "ingredients": [
+        "Salmon",
+        "Cucumber",
+        "Lettuce",
+        "Potato",
+        "Ketchup"
+      ],
+      "calories": 272,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Mushroom with Whole Wheat Wrap",
+      "ingredients": [
+        "Bass",
+        "Mushroom",
+        "Cucumber",
+        "Whole Wheat Wrap",
+        "Pasta"
+      ],
+      "calories": 543,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Beef with Bell Pepper",
+      "ingredients": [
+        "Beef",
+        "Bell Pepper",
+        "Mushroom",
+        "Hummus",
+        "Pepper"
+      ],
+      "calories": 459,
+      "type": "balanced",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Tomato",
+      "ingredients": [
+        "Tuna",
+        "Tomato",
+        "Mushroom",
+        "Soy Sauce",
+        "Ginger"
+      ],
+      "calories": 263,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Lettuce",
+        "Ginger",
+        "Garlic"
+      ],
+      "calories": 617,
+      "type": "gluten-free",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Zucchini with Oats",
+      "ingredients": [
+        "Egg",
+        "Zucchini",
+        "Lettuce",
+        "Oregano",
+        "Oats"
+      ],
+      "calories": 370,
+      "type": "vegetarian",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Mushroom with Potato",
+      "ingredients": [
+        "Tofu",
+        "Mushroom",
+        "Broccoli",
+        "Potato",
+        "Garlic"
+      ],
+      "calories": 258,
+      "type": "vegetarian",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Lettuce",
+      "ingredients": [
+        "Bass",
+        "Lettuce",
+        "Cucumber",
+        "Ginger",
+        "Mustard"
+      ],
+      "calories": 415,
+      "type": "vegan",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Spinach with Quinoa",
+      "ingredients": [
+        "Pork",
+        "Spinach",
+        "Tomato",
+        "Mayonnaise",
+        "Quinoa"
+      ],
+      "calories": 341,
+      "type": "low calorie",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Lettuce",
+      "ingredients": [
+        "Beef",
+        "Lettuce",
+        "Mushroom",
+        "Oregano",
+        "Basil"
+      ],
+      "calories": 574,
+      "type": "low calorie",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Tomato with Rice",
+      "ingredients": [
+        "Chicken Breast",
+        "Tomato",
+        "Lettuce",
+        "Rice",
+        "Mustard"
+      ],
+      "calories": 336,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Spinach with Pasta",
+      "ingredients": [
+        "Salmon",
+        "Spinach",
+        "Broccoli",
+        "Pasta",
+        "Hummus"
+      ],
+      "calories": 576,
+      "type": "vegetarian",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Bell Pepper",
+      "ingredients": [
+        "Tuna",
+        "Bell Pepper",
+        "Cucumber",
+        "Ginger",
+        "Paprika"
+      ],
+      "calories": 445,
+      "type": "low calorie",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Carrot with Oats",
+      "ingredients": [
+        "Beef",
+        "Carrot",
+        "Bell Pepper",
+        "Basil",
+        "Oats"
+      ],
+      "calories": 529,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Lettuce",
+      "ingredients": [
+        "Chicken Breast",
+        "Lettuce",
+        "Carrot",
+        "Ketchup",
+        "Oregano"
+      ],
+      "calories": 527,
+      "type": "high-protein",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Tomato",
+      "ingredients": [
+        "Lentils",
+        "Tomato",
+        "Cucumber",
+        "Salt",
+        "Garlic"
+      ],
+      "calories": 406,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Cucumber with Pasta",
+      "ingredients": [
+        "Beef",
+        "Cucumber",
+        "Bell Pepper",
+        "Pasta",
+        "Greek Yogurt"
+      ],
+      "calories": 491,
+      "type": "vegan",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Cucumber with Oats",
+      "ingredients": [
+        "Bass",
+        "Cucumber",
+        "Carrot",
+        "Oats",
+        "Mustard"
+      ],
+      "calories": 380,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Spinach",
+      "ingredients": [
+        "Lentils",
+        "Spinach",
+        "Cucumber",
+        "Salt",
+        "Cilantro"
+      ],
+      "calories": 484,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Tomato",
+      "ingredients": [
+        "Bass",
+        "Tomato",
+        "Cucumber",
+        "Oregano",
+        "Paprika"
+      ],
+      "calories": 510,
+      "type": "high-protein",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Zucchini with Sweet Potato",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Cucumber",
+        "Sweet Potato",
+        "Oregano"
+      ],
+      "calories": 480,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Cucumber",
+      "ingredients": [
+        "Bass",
+        "Cucumber",
+        "Tomato",
+        "Mustard",
+        "Soy Sauce"
+      ],
+      "calories": 560,
+      "type": "vegetarian",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Tomato with Potato",
+      "ingredients": [
+        "Salmon",
+        "Tomato",
+        "Lettuce",
+        "Basil",
+        "Potato"
+      ],
+      "calories": 687,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Mushroom",
+      "ingredients": [
+        "Egg",
+        "Mushroom",
+        "Cucumber",
+        "Ginger",
+        "Garlic"
+      ],
+      "calories": 346,
+      "type": "gluten-free",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Carrot",
+      "ingredients": [
+        "Tuna",
+        "Carrot",
+        "Bell Pepper",
+        "Paprika",
+        "Mustard"
+      ],
+      "calories": 529,
+      "type": "balanced",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Bell Pepper",
+      "ingredients": [
+        "Tofu",
+        "Bell Pepper",
+        "Carrot",
+        "Vinegar",
+        "Paprika"
+      ],
+      "calories": 378,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Cucumber with Pasta",
+      "ingredients": [
+        "Pork",
+        "Cucumber",
+        "Tomato",
+        "Pasta",
+        "Oregano"
+      ],
+      "calories": 638,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Cucumber with Quinoa",
+      "ingredients": [
+        "Turkey",
+        "Cucumber",
+        "Carrot",
+        "Quinoa",
+        "Cilantro"
+      ],
+      "calories": 531,
+      "type": "balanced",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Bell Pepper",
+      "ingredients": [
+        "Bass",
+        "Bell Pepper",
+        "Cucumber",
+        "Mustard",
+        "Greek Yogurt"
+      ],
+      "calories": 261,
+      "type": "vegetarian",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Salmon with Zucchini",
+      "ingredients": [
+        "Salmon",
+        "Zucchini",
+        "Broccoli",
+        "Ketchup",
+        "Ginger"
+      ],
+      "calories": 532,
+      "type": "gluten-free",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Tomato with Quinoa",
+      "ingredients": [
+        "Turkey",
+        "Tomato",
+        "Cucumber",
+        "Quinoa",
+        "Mustard"
+      ],
+      "calories": 337,
+      "type": "gluten-free",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Mushroom with Potato",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Tomato",
+        "Basil",
+        "Potato"
+      ],
+      "calories": 307,
+      "type": "gluten-free",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Mushroom with Whole Wheat Wrap",
+      "ingredients": [
+        "Egg",
+        "Mushroom",
+        "Tomato",
+        "Hummus",
+        "Whole Wheat Wrap"
+      ],
+      "calories": 444,
+      "type": "vegan",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Salmon with Mushroom with Whole Wheat Wrap",
+      "ingredients": [
+        "Salmon",
+        "Mushroom",
+        "Carrot",
+        "Whole Wheat Wrap",
+        "Ginger"
+      ],
+      "calories": 381,
+      "type": "gluten-free",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Lentils with Mushroom",
+      "ingredients": [
+        "Lentils",
+        "Mushroom",
+        "Lettuce",
+        "Garlic",
+        "Ketchup"
+      ],
+      "calories": 506,
+      "type": "gluten-free",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Mushroom",
+      "ingredients": [
+        "Turkey",
+        "Mushroom",
+        "Bell Pepper",
+        "Garlic",
+        "Salt"
+      ],
+      "calories": 692,
+      "type": "high-protein",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Zucchini",
+      "ingredients": [
+        "Chicken Breast",
+        "Zucchini",
+        "Cucumber",
+        "Olive Oil",
+        "Oregano"
+      ],
+      "calories": 475,
+      "type": "gluten-free",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Cucumber with Pasta",
+      "ingredients": [
+        "Bass",
+        "Cucumber",
+        "Tomato",
+        "Pasta",
+        "Mustard"
+      ],
+      "calories": 314,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Cucumber with Potato",
+      "ingredients": [
+        "Chicken Breast",
+        "Cucumber",
+        "Zucchini",
+        "Potato",
+        "Soy Sauce"
+      ],
+      "calories": 271,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Spinach",
+      "ingredients": [
+        "Beef",
+        "Spinach",
+        "Cucumber",
+        "Cilantro",
+        "Oregano"
+      ],
+      "calories": 296,
+      "type": "high-protein",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Mushroom",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Zucchini",
+        "Ketchup",
+        "Vinegar"
+      ],
+      "calories": 675,
+      "type": "gluten-free",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Bell Pepper with Potato",
+      "ingredients": [
+        "Pork",
+        "Bell Pepper",
+        "Spinach",
+        "Potato",
+        "Mayonnaise"
+      ],
+      "calories": 541,
+      "type": "balanced",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Lettuce",
+      "ingredients": [
+        "Salmon",
+        "Lettuce",
+        "Spinach",
+        "Basil",
+        "Ginger"
+      ],
+      "calories": 388,
+      "type": "vegetarian",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Broccoli",
+      "ingredients": [
+        "Tofu",
+        "Broccoli",
+        "Mushroom",
+        "Olive Oil",
+        "Salt"
+      ],
+      "calories": 673,
+      "type": "vegan",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Broccoli",
+      "ingredients": [
+        "Tuna",
+        "Broccoli",
+        "Bell Pepper",
+        "Mayonnaise",
+        "Garlic"
+      ],
+      "calories": 473,
+      "type": "vegetarian",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Lettuce",
+      "ingredients": [
+        "Bass",
+        "Lettuce",
+        "Carrot",
+        "Basil",
+        "Ketchup"
+      ],
+      "calories": 510,
+      "type": "vegan",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Turkey with Spinach with Quinoa",
+      "ingredients": [
+        "Turkey",
+        "Spinach",
+        "Broccoli",
+        "Pepper",
+        "Quinoa"
+      ],
+      "calories": 500,
+      "type": "gluten-free",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Zucchini with Potato",
+      "ingredients": [
+        "Tofu",
+        "Zucchini",
+        "Spinach",
+        "Potato",
+        "Basil"
+      ],
+      "calories": 614,
+      "type": "gluten-free",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Carrot with Oats",
+      "ingredients": [
+        "Beef",
+        "Carrot",
+        "Bell Pepper",
+        "Garlic",
+        "Oats"
+      ],
+      "calories": 632,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Carrot with Potato",
+      "ingredients": [
+        "Chicken Breast",
+        "Carrot",
+        "Broccoli",
+        "Potato",
+        "Oregano"
+      ],
+      "calories": 598,
+      "type": "high-protein",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Zucchini",
+      "ingredients": [
+        "Lentils",
+        "Zucchini",
+        "Mushroom",
+        "Soy Sauce",
+        "Ketchup"
+      ],
+      "calories": 594,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Broccoli with Quinoa",
+      "ingredients": [
+        "Tofu",
+        "Broccoli",
+        "Tomato",
+        "Quinoa",
+        "Soy Sauce"
+      ],
+      "calories": 575,
+      "type": "high-protein",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Cucumber",
+      "ingredients": [
+        "Lentils",
+        "Cucumber",
+        "Zucchini",
+        "Salt",
+        "Pepper"
+      ],
+      "calories": 250,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Bell Pepper",
+      "ingredients": [
+        "Chicken Breast",
+        "Bell Pepper",
+        "Mushroom",
+        "Hummus",
+        "Cilantro"
+      ],
+      "calories": 440,
+      "type": "vegan",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Broccoli with Pasta",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Zucchini",
+        "Pasta",
+        "Salt"
+      ],
+      "calories": 334,
+      "type": "low calorie",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Mushroom with Quinoa",
+      "ingredients": [
+        "Salmon",
+        "Mushroom",
+        "Carrot",
+        "Salt",
+        "Quinoa"
+      ],
+      "calories": 619,
+      "type": "gluten-free",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Tomato with Oats",
+      "ingredients": [
+        "Egg",
+        "Tomato",
+        "Zucchini",
+        "Oats",
+        "Potato"
+      ],
+      "calories": 630,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Zucchini with Pasta",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Bell Pepper",
+        "Pasta",
+        "Paprika"
+      ],
+      "calories": 362,
+      "type": "gluten-free",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Bell Pepper with Sweet Potato",
+      "ingredients": [
+        "Turkey",
+        "Bell Pepper",
+        "Spinach",
+        "Paprika",
+        "Sweet Potato"
+      ],
+      "calories": 383,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Bell Pepper with Toast Bread",
+      "ingredients": [
+        "Egg",
+        "Bell Pepper",
+        "Tomato",
+        "Greek Yogurt",
+        "Toast Bread"
+      ],
+      "calories": 411,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Egg with Spinach",
+      "ingredients": [
+        "Egg",
+        "Spinach",
+        "Mushroom",
+        "Greek Yogurt",
+        "Hummus"
+      ],
+      "calories": 676,
+      "type": "high-protein",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Zucchini",
+      "ingredients": [
+        "Bass",
+        "Zucchini",
+        "Bell Pepper",
+        "Vinegar",
+        "Pepper"
+      ],
+      "calories": 390,
+      "type": "vegan",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Cucumber",
+      "ingredients": [
+        "Lentils",
+        "Cucumber",
+        "Broccoli",
+        "Olive Oil",
+        "Greek Yogurt"
+      ],
+      "calories": 672,
+      "type": "low calorie",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tuna with Zucchini",
+      "ingredients": [
+        "Tuna",
+        "Zucchini",
+        "Tomato",
+        "Greek Yogurt",
+        "Mayonnaise"
+      ],
+      "calories": 520,
+      "type": "gluten-free",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Tomato",
+      "ingredients": [
+        "Chicken Breast",
+        "Tomato",
+        "Broccoli",
+        "Hummus",
+        "Mustard"
+      ],
+      "calories": 604,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Lettuce",
+      "ingredients": [
+        "Chicken Breast",
+        "Lettuce",
+        "Zucchini",
+        "Ginger",
+        "Oregano"
+      ],
+      "calories": 305,
+      "type": "vegetarian",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Lettuce",
+      "ingredients": [
+        "Lentils",
+        "Lettuce",
+        "Tomato",
+        "Garlic",
+        "Salt"
+      ],
+      "calories": 271,
+      "type": "high-protein",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Zucchini",
+      "ingredients": [
+        "Chicken Breast",
+        "Zucchini",
+        "Mushroom",
+        "Pepper",
+        "Mayonnaise"
+      ],
+      "calories": 404,
+      "type": "vegetarian",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Carrot with Pasta",
+      "ingredients": [
+        "Bass",
+        "Carrot",
+        "Lettuce",
+        "Soy Sauce",
+        "Pasta"
+      ],
+      "calories": 695,
+      "type": "vegetarian",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Lentils with Mushroom with Potato",
+      "ingredients": [
+        "Lentils",
+        "Mushroom",
+        "Broccoli",
+        "Potato",
+        "Hummus"
+      ],
+      "calories": 559,
+      "type": "low calorie",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Mushroom with Rice",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Bell Pepper",
+        "Mustard",
+        "Rice"
+      ],
+      "calories": 292,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Salmon with Carrot with Sweet Potato",
+      "ingredients": [
+        "Salmon",
+        "Carrot",
+        "Bell Pepper",
+        "Sweet Potato",
+        "Ketchup"
+      ],
+      "calories": 334,
+      "type": "balanced",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Mushroom with Oats",
+      "ingredients": [
+        "Tuna",
+        "Mushroom",
+        "Tomato",
+        "Oats",
+        "Hummus"
+      ],
+      "calories": 585,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Cucumber with Oats",
+      "ingredients": [
+        "Tofu",
+        "Cucumber",
+        "Zucchini",
+        "Oats",
+        "Potato"
+      ],
+      "calories": 535,
+      "type": "high-protein",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Beef with Carrot with Whole Wheat Wrap",
+      "ingredients": [
+        "Beef",
+        "Carrot",
+        "Lettuce",
+        "Whole Wheat Wrap",
+        "Soy Sauce"
+      ],
+      "calories": 297,
+      "type": "vegetarian",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Beef with Zucchini with Rice",
+      "ingredients": [
+        "Beef",
+        "Zucchini",
+        "Mushroom",
+        "Soy Sauce",
+        "Rice"
+      ],
+      "calories": 343,
+      "type": "keto-friendly",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Bass with Broccoli with Potato",
+      "ingredients": [
+        "Bass",
+        "Broccoli",
+        "Cucumber",
+        "Potato",
+        "Paprika"
+      ],
+      "calories": 392,
+      "type": "vegetarian",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Cucumber with Potato",
+      "ingredients": [
+        "Tuna",
+        "Cucumber",
+        "Mushroom",
+        "Pepper",
+        "Potato"
+      ],
+      "calories": 323,
+      "type": "vegan",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tofu with Bell Pepper with Pasta",
+      "ingredients": [
+        "Tofu",
+        "Bell Pepper",
+        "Cucumber",
+        "Soy Sauce",
+        "Pasta"
+      ],
+      "calories": 518,
+      "type": "keto-friendly",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Carrot",
+      "ingredients": [
+        "Chicken Breast",
+        "Carrot",
+        "Cucumber",
+        "Greek Yogurt",
+        "Ginger"
+      ],
+      "calories": 309,
+      "type": "keto-friendly",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Cucumber",
+      "ingredients": [
+        "Lentils",
+        "Cucumber",
+        "Zucchini",
+        "Paprika",
+        "Mustard"
+      ],
+      "calories": 263,
+      "type": "low calorie",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Lentils with Carrot",
+      "ingredients": [
+        "Lentils",
+        "Carrot",
+        "Tomato",
+        "Mayonnaise",
+        "Salt"
+      ],
+      "calories": 371,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Lettuce with Pasta",
+      "ingredients": [
+        "Egg",
+        "Lettuce",
+        "Zucchini",
+        "Pasta",
+        "Potato"
+      ],
+      "calories": 494,
+      "type": "vegan",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Chicken Breast with Spinach with Potato",
+      "ingredients": [
+        "Chicken Breast",
+        "Spinach",
+        "Cucumber",
+        "Ketchup",
+        "Potato"
+      ],
+      "calories": 579,
+      "type": "balanced",
+      "preparation_tip": "Serve warm for the best taste.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Pork with Mushroom with Potato",
+      "ingredients": [
+        "Pork",
+        "Mushroom",
+        "Tomato",
+        "Potato",
+        "Paprika"
+      ],
+      "calories": 497,
+      "type": "keto-friendly",
+      "preparation_tip": "Grill the protein for a smoky flavor.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Turkey with Carrot",
+      "ingredients": [
+        "Turkey",
+        "Carrot",
+        "Spinach",
+        "Salt",
+        "Vinegar"
+      ],
+      "calories": 293,
+      "type": "balanced",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Egg with Cucumber",
+      "ingredients": [
+        "Egg",
+        "Cucumber",
+        "Lettuce",
+        "Mustard",
+        "Ginger"
+      ],
+      "calories": 322,
+      "type": "vegetarian",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Tomato",
+      "ingredients": [
+        "Tofu",
+        "Tomato",
+        "Broccoli",
+        "Mustard",
+        "Salt"
+      ],
+      "calories": 423,
+      "type": "low calorie",
+      "preparation_tip": "Add herbs at the end to retain freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Pork with Broccoli with Whole Wheat Wrap",
+      "ingredients": [
+        "Pork",
+        "Broccoli",
+        "Lettuce",
+        "Whole Wheat Wrap",
+        "Rice"
+      ],
+      "calories": 450,
+      "type": "keto-friendly",
+      "preparation_tip": "Toss everything together with olive oil and a pinch of salt.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type. Warm the wrap on a dry pan for 1 minute each side before filling."
+    },
+    {
+      "name": "Tofu with Zucchini",
+      "ingredients": [
+        "Tofu",
+        "Zucchini",
+        "Cucumber",
+        "Pepper",
+        "Mustard"
+      ],
+      "calories": 425,
+      "type": "vegan",
+      "preparation_tip": "Add a splash of lemon juice before serving for freshness.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Bass with Spinach with Oats",
+      "ingredients": [
+        "Bass",
+        "Spinach",
+        "Tomato",
+        "Oats",
+        "Mustard"
+      ],
+      "calories": 686,
+      "type": "low calorie",
+      "preparation_tip": "Lightly saut the vegetables to preserve crunchiness.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    },
+    {
+      "name": "Tuna with Bell Pepper",
+      "ingredients": [
+        "Tuna",
+        "Bell Pepper",
+        "Cucumber",
+        "Mayonnaise",
+        "Paprika"
+      ],
+      "calories": 631,
+      "type": "vegan",
+      "preparation_tip": "Use a non-stick pan for easier cleanup.",
+      "cooking_tip": "Season the fish with salt and pepper, then pan-sear or steam until flaky and tender. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Chicken Breast with Mushroom",
+      "ingredients": [
+        "Chicken Breast",
+        "Mushroom",
+        "Carrot",
+        "Mayonnaise",
+        "Greek Yogurt"
+      ],
+      "calories": 606,
+      "type": "vegan",
+      "preparation_tip": "Cook over medium heat to avoid burning.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Tofu with Cucumber",
+      "ingredients": [
+        "Tofu",
+        "Cucumber",
+        "Zucchini",
+        "Oregano",
+        "Paprika"
+      ],
+      "calories": 599,
+      "type": "high-protein",
+      "preparation_tip": "Marinate the protein for 30 minutes for deeper flavor.",
+      "cooking_tip": "Cook tofu until golden and crispy, or boil lentils until soft, around 20 minutes. Lightly saut or steam the vegetables to retain nutrients and crunch."
+    },
+    {
+      "name": "Beef with Lettuce with Potato",
+      "ingredients": [
+        "Beef",
+        "Lettuce",
+        "Broccoli",
+        "Potato",
+        "Garlic"
+      ],
+      "calories": 511,
+      "type": "keto-friendly",
+      "preparation_tip": "Steam the ingredients for a healthier option.",
+      "cooking_tip": "Heat a pan over medium-high heat with a bit of oil. Sear the meat until browned on both sides and cooked through. Lightly saut or steam the vegetables to retain nutrients and crunch. Boil or steam the carbs until tender\u2014around 10\u201315 minutes depending on type."
+    }
+  ]
+}

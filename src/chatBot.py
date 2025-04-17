@@ -20,14 +20,15 @@ ollama = OllamaLLM(model='llama3.2')
 embedding_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 
 # Load the FAISS index and document embeddings
-index = faiss.read_index('data/faiss_index.index')
-embeddings_matrix = np.load('data/embeddings.npy')
+index = faiss.read_index('Data/Exercises/faiss_index.index')
+embeddings_matrix = np.load('Data/Exercises/embeddings.npy')
 
 # Current hardcoded JSON response
 raw_json_docs = [
-    "data/exercises/exercises1.json", 
-    "data/exercises/exercises2.json", 
-    "data/exercises/exercises3.json"
+    #"data/exercises/exercises1.json", 
+    #"data/exercises/exercises2.json", 
+   # "data/exercises/exercises3.json",
+    "data/exercises/meal1.json"
     ]
 
 documents = []
@@ -45,20 +46,28 @@ for file in raw_json_docs:
 
         # Check if the exercise_dict is a dictionary and contains 'exercises' key
         if isinstance(exercise_dict, dict):
-            exercise_list = exercise_dict.get("exercises", [])
+            exercise_list = exercise_dict.get("exercises") or exercise_dict.get("meals") or []
         elif isinstance(exercise_dict, list):
             # If exercise_dict is a list, you can directly assign it
             exercise_list = exercise_dict
         else:
+            print(f" Loaded {len(documents)} documents into memory")
             continue
 
         # Add each exercise as an individual document
-        for exercise_item in exercise_list:
-            document = Document(page_content=str(exercise_item), metadata={"source": file, "seq_num": num + 1})
-            num += 1
-            documents.append(document)
+        if isinstance(exercise_list, dict):
+            for key, item in exercise_list.items():
+                document = Document(page_content=str(item), metadata={"source": file, "seq_num": num + 1, "label": key})
+                num += 1
+                documents.append(document)
+        elif isinstance(exercise_list, list):
+            for item in exercise_list:
+                document = Document(page_content=str(item), metadata={"source": file, "seq_num": num + 1})
+                num += 1
+                documents.append(document)
 
-# Function to query the FAISS vector store and get relevant documents
+
+
 def query_vector_store(query, k=5):
     # Convert the query into an embedding
     query_embedding = embedding_model.encode([query])[0]
@@ -68,7 +77,7 @@ def query_vector_store(query, k=5):
     D, I = index.search(query_embedding, k)  # Retrieve the top k most similar documents
     
     # Fetch the corresponding documents based on the indices returned by FAISS
-    relevant_docs = [documents[i] for i in I[0]]
+    relevant_docs = [documents[i] for i in I[0] if i < len(documents)]
     
     return relevant_docs
 
@@ -80,6 +89,14 @@ with open("prompts/workoutPlanPrompt", "r") as file:
 
 with open("prompts/conciseAnswerPrompt", "r") as file:
     conciseAnswerPrompt = file.read()
+
+with open("prompts/mealPlanPrompt", "r", encoding="utf-8") as file:
+    mealPlanPrompt = file.read()
+
+with open("prompts/generalmealplanPrompt", "r", encoding="utf-8") as file:
+    generalmealplanPrompt = file.read()
+
+
 
 
 # Defines the object with properties required for queries 
@@ -96,15 +113,30 @@ def retrieve(state:State):
 # Generates an answer using the retrieved documents and streams output
 def generate(state: State):
     docs_content = "\n\n".join([doc.page_content for doc in state["context"]])
-
+    lower_q = state["question"].lower()
     # Choose the appropriate prompt template
-    if "workout plan" in state["question"].lower() or "exercise routine" in state["question"].lower():
+    if "general" in lower_q:
+        if "workout plan" in lower_q or "exercise routine" in lower_q:
+            prompt_text = conciseAnswerPrompt.format(context=docs_content, question=state["question"])
+            # Stream response from Ollama using the chosen prompt
+            response_stream = ollama.stream(prompt_text)
+        elif "meal plan" in lower_q:
+            # Use your new meal plan prompt
+            prompt_text = generalmealplanPrompt.format(context=docs_content, question=state["question"])
+            response_stream = ollama.stream(prompt_text) 
+    elif "workout plan" in lower_q or "exercise routine" in lower_q:
+    # Use your workout prompt
         prompt_text = workoutPlanPrompt.format(context=docs_content, question=state["question"])
+        response_stream = ollama.stream(prompt_text)
+    elif "meal plan" in lower_q:
+    # Use your new meal plan prompt
+        prompt_text = mealPlanPrompt.format(context=docs_content, question=state["question"])
+        response_stream = ollama.stream(prompt_text)
     else:
+    # Default to your concise prompt
         prompt_text = conciseAnswerPrompt.format(context=docs_content, question=state["question"])
-
-    # Stream response from Ollama using the chosen prompt
-    response_stream = ollama.stream(prompt_text)
+        # Stream response from Ollama using the chosen prompt
+        response_stream = ollama.stream(prompt_text)
 
     def stream_generator():
         # print("Streaming response:")

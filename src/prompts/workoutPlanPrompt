@@ -23,7 +23,6 @@ Use the following retrieved information:
 ## **Duration:** *[Insert duration, e.g., 4 weeks, 8 weeks, ongoing, etc.]*  
 ## **Training Split:** *[e.g., Full-Body, Upper/Lower, Push/Pull/Legs, etc.]*  
 
----
 
 ## **Workout Breakdown**  
 
@@ -54,3 +53,5 @@ Use the following retrieved information:
 
 ### **Equipment Needed:**  
 - *[e.g., Dumbbells, Resistance Bands, Barbell, Machines, Bodyweight.]*  
+
+Now produce your meal plan using **exactly** multiline format:
