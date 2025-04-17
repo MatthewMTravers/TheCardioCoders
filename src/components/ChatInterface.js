@@ -156,14 +156,46 @@ const ChatInterface = () => {
   };
 
   const downloadExercisesPDF = () => {
-    const doc = new jsPDF();
-    doc.setFontSize(14);
-    doc.text('Saved Exercises', 10, 10);
-    savedExercises.forEach((exercise, index) => {
-      doc.text(`${index + 1}. ${exercise}`, 10, 20 + index * 10);
+    if (savedExercises.length === 0) return;
+     const doc = new jsPDF();
+     savedExercises.forEach((exerciseText, exerciseIndex) => {
+      if (exerciseIndex !== 0) doc.addPage();
+       // Centered Bold Title
+      const title = "Saved Exercises";
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(18);
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const titleWidth = doc.getTextWidth(title);
+      const centerX = (pageWidth - titleWidth) / 2;
+      doc.text(title, centerX, 15);
+       //  Set up initial Y position with extra spacing under the title
+      let y = 30;
+       //  Reset to normal font for content
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(12);
+       // Remove boilerplate AI text
+      const lines = exerciseText.split('\n').filter(line =>
+        !/^(let's create a |based on the |please note that this is just|since no specific goal was mentioned)/i.test(line.trim())
+      );
+       let cleaned = lines.join('\n')
+        .replace(/^#{1,6}\s*/gm, '')                     // Remove all '#' headers
+        .replace(/\*\*(.*?)\*\*/g, '$1')                // Remove bold
+        .replace(/^\s*[-*+]\s+/gm, '• ')                // Convert bullets to •
+        .replace(/^\s*\d+\.\s+/gm, match => match.trim()) // Keep numbered lists
+        .replace(/\n{2,}/g, '\n')                       // Collapse extra blank lines
+        .trim();
+       const wrappedLines = doc.splitTextToSize(cleaned, 180);
+       wrappedLines.forEach(line => {
+        if (y > 270) {
+          doc.addPage();
+          y = 10;
+        }
+        doc.text(line, 10, y);
+        y += 8;
+      });
     });
-    doc.save('saved_exercises.pdf');
-  };
+     doc.save("Saved_Exercises.pdf");
+  }; 
 
   const formatContent = (content) => (
     <ReactMarkdown
